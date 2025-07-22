@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teach on Skill Up</title>
+  <link rel="stylesheet" href="anim.css" />
+  <!-- Add this inside <head> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      background-color: #a3fff4;
+      text-align: center;
+      padding: 4rem 1rem;
+      height: 50vh;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-btn {
+      background-color: black;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .features {
+      padding: 3rem 1rem;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    .features h2 {
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .feature-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      width: 280px;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    .cta-section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .cta-section a {
+      margin: 0.5rem;
+      display: inline-block;
+    }
+
+    /* Footer */
+    .footer {
+      background: #a3fff4;
+      color: black;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .footer-links {
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: black;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .footer-links a {
+        display: inline-block;
+      }
+
+      .feature-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .head {
+      text-align: center;
+      margin-bottom: 25px;
+      background-color: #a3fff4;
+      width: auto;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 0rem;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.6rem;
+      font-weight: bold;
+      height: 6vh;
+    }
+
+    span {
+      color: black;
+      font-size: 20px;
+      font-weight: bolder;
+      word-spacing: 10px;
+      padding-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .feature-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1.5rem;
+      margin: 2rem 1rem;
+    }
+
+    .feature-card {
+      flex: 1 1 200px;
+      max-width: 250px;
+      text-align: center;
+      padding: 1rem;
+      background-color: #f5fefe;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: #00b894;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="head">
+    <div class="logos">
+      <img src="images/bglogo.png" alt="Skill Up Logo" class="logo">
+    </div>
+    <span>
+      <a href="learner.html">Learn</a>
+      <a href="teacher.html">Teach</a>
+      <a href="index.html">Grow</a>
+    </span>
+  </header>
+
+<!-- HERO -->
+<section class="hero reveal fade-up">
+  <h1>Teach From Anywhere in Nigeria</h1>
+  <p style="font-size: 1.1rem; font-weight: lighter;">No certificates needed — just your skill, your time, and a phone. We bring students to you.</p>
+  <a href="teach.html" style="font-weight: lighter; font-size: 1rem;" class="cta-btn">Create Your Teacher Profile</a>
+</section>
+
+<!-- BENEFITS SECTION FOR TEACHERS -->
+<section class="benefits reveal slide-up" style="padding: 60px 20px; background: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
+  <h2 style="text-align: center; font-size: 2em; margin-bottom: 40px; color: #333;">Why Teach With Skill Up?</h2>
+
+  <div class="benefit-cards" style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  ">
+
+    <div class="card" style="
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.07);
+      padding: 30px;
+      flex: 1 1 280px;
+      max-width: 350px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: transform 0.3s ease;
+    ">
+      <i class="fas fa-user-check" style="font-size: 2.2em; color: #00a859; margin-bottom: 10px;"></i>
+      <h3 style="font-size: 1.3em; margin-bottom: 10px;">Reach Local Learners</h3>
+      <p style="color: #555;">Whether you’re teaching in your area or online, Skill Up connects you with learners who value your time and knowledge.</p>
+    </div>
+
+    <div class="card" style="
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.07);
+      padding: 30px;
+      flex: 1 1 280px;
+      max-width: 350px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: transform 0.3s ease;
+    ">
+      <i class="fas fa-chalkboard-teacher" style="font-size: 2.2em; color: #00a859; margin-bottom: 10px;"></i>
+      <h3 style="font-size: 1.3em; margin-bottom: 10px;">Teach In Your Own Way</h3>
+      <p style="color: #555;">You decide how you teach — from your home, a café, a centre, or virtually. We just make it easier.</p>
+    </div>
+
+    <div class="card" style="
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.07);
+      padding: 30px;
+      flex: 1 1 280px;
+      max-width: 350px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: transform 0.3s ease;
+    ">
+      <i class="fas fa-wallet" style="font-size: 2.2em; color: #00a859; margin-bottom: 10px;"></i>
+      <h3 style="font-size: 1.3em; margin-bottom: 10px;">Get Paid Directly</h3>
+      <p style="color: #555;">No commissions, no delays. Learners pay you directly — you control your rates and session terms.</p>
+    </div>
+
+    <div class="card" style="
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.07);
+      padding: 30px;
+      flex: 1 1 280px;
+      max-width: 350px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: transform 0.3s ease;
+    ">
+      <i class="fas fa-clock" style="font-size: 2.2em; color: #00a859; margin-bottom: 10px;"></i>
+      <h3 style="font-size: 1.3em; margin-bottom: 10px;">Flexible Teaching Hours</h3>
+      <p style="color: #555;">Teach when you’re free — part-time, weekends, after NYSC, or full-time. You’re in charge of your schedule.</p>
+    </div>
+
+    <div class="card" style="
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.07);
+      padding: 30px;
+      flex: 1 1 280px;
+      max-width: 350px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: transform 0.3s ease;
+    ">
+      <i class="fas fa-users" style="font-size: 2.2em; color: #00a859; margin-bottom: 10px;"></i>
+      <h3 style="font-size: 1.3em; margin-bottom: 10px;">Build Your Teaching Brand</h3>
+      <p style="color: #555;">Stand out in your community as a verified Skill Up tutor. Grow your reputation while helping others grow too.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- SECTION 2: Get Started as a Teacher -->
+<section class="cta-section reveal fade-up">
+  <h2>Earn From the Skills You Already Have</h2>
+  <p>Whether you’re a student, graduate, artisan, or even a training centre — create a free profile and start earning by teaching practical skills Nigerians need today.</p>
+  <a href="teach.html" class="cta-btn">Join Skill Up Now</a>
+  <a href="skills.html" class="cta-btn">Teach and Earn</a>
+</section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Add a Skill</a>
+      <a href="learn.html">Learn a Skill</a>
+      <a href="contact.html">Contact</a>
+    </div>
+      <p style="font-size: 1rem;">
+            You’re viewing the <strong>Skill Up MVP (Minimum Viable Product)</strong>. We’re testing, improving, and
+            building the full platform — and your feedback will shape the future of Skill Up.
+        </p>
+        <p>
+       Got ideas or issues?<a href="contact.html" style="color: #111;">Tell us.</a> Your voice matters.
+        </p>
+    <p>&copy; 2025 Skill Up. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

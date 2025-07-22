@@ -1,0 +1,170 @@
+
+/* Animations */
+@keyframes slideDownAnim {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+  }
+  
+  .delay-1 {
+    animation-delay: 0.2s;
+  }
+  
+  .delay-2 {
+    animation-delay: 0.4s;
+  }
+  
+  .delay-3 {
+    animation-delay: 0.6s;
+  }
+  
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .slide-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+  }
+
+  
+  .step {
+    height: 5px;
+    width: 5px;
+    margin: 0 1px;
+    background-color: #bbbbbb;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+    padding: 9px;
+  }
+
+  /* Footer */
+.footer {
+    background: #a3fff4;
+    color: black;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .footer-links {
+    margin-bottom: 1rem;
+  }
+  .footer-links a {
+    color: black;
+    margin: 0 1rem;
+    text-decoration: none;
+  }
+  @media screen and (max-width: 600px){
+    .footer-links a{
+      display: inline-block;
+    }
+  }
+  
+  .head {
+    text-align: center;
+    margin-bottom: 25px;
+    background-color: #a3fff4;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 0rem;
+  }
+  .logo {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+  height:6vh;
+  }
+  span{
+  color:black;
+  font-size:20px;
+  font-weight:bolder;
+  word-spacing:10px;
+  padding-bottom:10px;
+  }
+ span a{
+    text-decoration: none;
+    color: black;
+    font-family: Corbel;
+  }
+   #nextBtn .cta-btn {
+      background-color: black;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    #nextBtn    .cta-btn:hover {
+color: black;
+background-color: lightgray;
+transition: 0.5s;
+    }
+    #nextBtn{
+       background-color: black;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+   #nextBtn:hover {
+      color: black;
+background-color: lightgray;
+transition: 0.5s;
+    }
+   #prevBtn {
+       background-color: black;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  #prevBtn:hover  {
+      color: black;
+background-color: lightgray;
+transition: 0.5s;
+    }
+i{
+  color: #00a859;
+}
+body, *{
+  font-family: 'Segoe UI', sans-serif;
+  color: #444;
+}

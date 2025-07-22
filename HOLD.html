@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Story – Skill Up</title>
+    <link rel="stylesheet" href="anim.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        /* HERO */
+        .hero {
+            background-color: #a3fff4;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.5s ease;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+        }
+
+        /* SECTION: Our Mission */
+        .section {
+            padding: 3rem 1rem;
+            background: white;
+            margin-bottom: 1rem;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* BENEFITS SECTION */
+        .benefits {
+            background: #e7fcfc;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .benefits h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #222;
+        }
+
+        .benefit-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .card i {
+            font-size: 2rem;
+            color: #00b894;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+
+        /* Section: Founder's Note */
+        .founder {
+            padding: 2rem 1rem;
+            background-color: #00b894;
+            color: white;
+            border-left: 4px solid black;
+            border-right: 4px solid black;
+        }
+
+        .founder h3 {
+            margin-top: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Footer + Navbar included below */
+        .footer {
+            background: #a3fff4;
+            color: black;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: black;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .footer-links a {
+                display: inline-block;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .head {
+            text-align: center;
+            background-color: #a3fff4;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .logo {
+            height: 6vh;
+        }
+
+        span {
+            color: black;
+            font-size: 20px;
+            font-weight: bolder;
+            word-spacing: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="head">
+        <div class="logos">
+            <img src="images/bglogo.png" alt="Skill Up Logo" class="logo">
+        </div>
+        <span>
+            <a href="learner.html">Learn</a>
+            <a href="teacher.html">Teach</a>
+            <a href="index.html">Grow</a>
+        </span>
+    </header>
+
+    <!-- HERO -->
+    <!-- WHY WE BUILT SKILL UP -->
+    <section class="section" style="background-color: #a3fff4; text-align: center;">
+        <h2>Why We Built Skill Up</h2>
+        <p>
+            I’ve always wanted to teach web development — but I didn’t know how to find the right students, how to
+            begin, or even where to share what I had to offer. Like many others, I felt stuck and overwhelmed.
+        </p>
+        <p>
+            <span class="highlight">Skill Up was born to remove that stress</span> — for learners and teachers alike.
+            It’s a space where you can learn anything from real people near you or online, and where teaching doesn’t
+            require a school or formal setup.
+        </p>
+        <p>
+            Whether you're a beginner trying to learn a skill or a passionate individual with knowledge to share, Skill
+            Up helps you connect and grow — without the stress, confusion, or gatekeeping.
+        </p>
+    </section>
+
+    <!-- OUR MISSION -->
+    <section class="section">
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to build a truly human learning ecosystem. One where <strong>local talent becomes global
+                opportunity</strong>, and learning is not about certificates but transformation.
+        </p>
+        <p>
+            From underserved neighborhoods to buzzing tech cities, we’re empowering people to <strong>learn, teach,
+                earn, and collaborate</strong> — all while solving real-world problems.
+        </p>
+    </section>
+
+
+    <!-- HOW WE'RE DIFFERENT -->
+    <section class="section">
+        <h2>Why Skill Up Is Different</h2>
+        <ul>
+            <li><strong>Peer-to-Peer Learning:</strong> Unlike Udemy, where you're left with pre-recorded videos, Skill
+                Up connects you with real people — peers, mentors, and local guides who actively teach and learn with
+                you.</li>
+            <li><strong>Adaptive & Personalized:</strong> We recommend the right tutor or group for you based on your
+                skill level, pace, and goals. No one-size-fits-all courses here.</li>
+            <li><strong>Community Keeps You Going:</strong> Our live sessions, group challenges, and peer feedback help
+                learners stay motivated and accountable — reducing dropout rates.</li>
+            <li><strong>Learn & Earn:</strong> Anyone with a skill can become a tutor and earn, especially in places
+                where traditional teaching jobs are hard to find.</li>
+            <li><strong>Local & Inclusive:</strong> We focus on community-based learning, so people with low bandwidth
+                or no bank cards can still learn and grow.</li>
+            <li><strong>Real-Time & Practical:</strong> Our sessions are live, and projects are collaborative — so
+                you're not just watching; you're building and doing.</li>
+        </ul>
+    </section>
+
+    <section style="background-color: #f9f9f9; padding: 40px 20px; text-align: center;">
+        <h2>Why Skill Up is Different?</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+
+            <div style="width: 250px;">
+                <i class="fas fa-users" style="font-size: 40px; color: #007BFF;"></i>
+                <h4>Peer-to-Peer Learning:</h4>
+                <p> Unlike Udemy, where you're left with pre-recorded videos, Skill Up connects you with real people —
+                    peers, mentors, and local guides who actively teach and learn with you.</p>
+            </div>
+
+            <div style="width: 250px;">
+                <i class="fas fa-laptop-code" style="font-size: 40px; color: #28a745;"></i>
+                <h4>Adaptive & Personalized</h4>
+                <p> Our live sessions, group challenges, and peer feedback help learners stay motivated and accountable
+                    — reducing dropout rates.</p>
+            </div>
+
+            <div style="width: 250px;">
+                <i class="fas fa-chalkboard-teacher" style="font-size: 40px; color: #ffc107;"></i>
+                <h4>Community Keeps You Going</h4>
+                <p>Become a tutor, share your skill, and earn — even without a formal job.</p>
+            </div>
+
+            <div style="width: 250px;">
+                <i class="fas fa-chalkboard-teacher" style="font-size: 40px; color: #ffc107;"></i>
+                <h4>Learn & Earn</h4>
+                <p>Anyone with a skill can become a tutor and earn, especially in places where traditional teaching jobs
+                    are hard to find.</p>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <section style="background-color: #f9f9f9; padding: 40px 20px; text-align: center;">
+        <h2>Why Skill Up?</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+
+            <div style="width: 250px;">
+                <i class="fas fa-users" style="font-size: 40px; color: #007BFF;"></i>
+                <h4>Teachers register</h4>
+                <p>Learn together, share knowledge, and grow with peers and mentors in real time.</p>
+            </div>
+
+            <div style="width: 250px;">
+                <i class="fas fa-laptop-code" style="font-size: 40px; color: #28a745;"></i>
+                <h4>Students discover</h4>
+                <p>Hands-on learning with practical tasks and portfolio projects — not just theory.</p>
+            </div>
+
+            <div style="width: 250px;">
+                <i class="fas fa-chalkboard-teacher" style="font-size: 40px; color: #ffc107;"></i>
+                <h4>Teach & Earn</h4>
+                <p>Become a tutor, share your skill, and earn — even without a formal job.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="section">
+        <h2>How It Works</h2>
+        <ol>
+            <li><strong>Teachers register</strong> and set their availability.</li>
+            <li><strong>Students discover</strong> nearby or online classes.</li>
+            <li><strong>Classes happen</strong> — online or face-to-face, with easy communication and feedback.</li>
+        </ol>
+        <p>Simple. Human. Effective.</p>
+    </section>
+
+    <!-- MVP NOTE -->
+    <section class="section" style="text-align:center; background: #000; color: #fff;">
+        <h2>This Is Just the Beginning</h2>
+        <p>
+            You’re viewing the <strong>Skill Up MVP (Minimum Viable Product)</strong>. We’re testing, improving, and
+            building the full platform — and your feedback will shape the future of Skill Up.
+        </p>
+        <p>
+            💬 Got ideas or issues? Tell us. Your voice matters.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Add a Skill</a>
+            <a href="learn.html">Learn a Skill</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2025 Skill Up. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SECTION 3: Founder's Note -->
+<section class="features reveal slide-up" style="padding: 50px 20px; background-color:black; color: white; text-align: center;">
+  <h2>A Note From the Founder</h2>
+  <div style="max-width: 800px; margin: 0 auto; font-size: 1.1em; line-height: 1.8;">
+    <p>
+      I started Skill Up because I saw something powerful: a mother in her kitchen who knows how to bake the best cakes — but doesn’t know where to start teaching others. A student who’s great at math but can’t afford a tutor. A graduate who’s gifted with digital skills, sitting at home with no job — yet plenty of people around them need that knowledge.
+    </p>
+    <p>
+      Skill Up is not just a platform. It’s a movement. We believe anyone can teach. Anyone can learn. You don’t need a fancy classroom — you need a connection. Skill Up connects you to real people in your community, people with knowledge and passion, willing to help you rise.
+    </p>
+    <p>
+      Whether you're teaching or learning, Skill Up is your place to grow, share, and shine. Welcome to a future where skills are passed from hand to hand, neighbor to neighbor, and heart to heart.
+    </p>
+    <p style="font-style: italic; margin-top: 20px;">— The Founder, Skill Up</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Payment Works | Skill Up</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 0.75rem;
+      color: #000;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .cta {
+      background-color: #000;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.5s ease;
+      display: inline-block;
+    }
+
+    .cta:hover {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #000;
+    }
+
+    .info-box {
+      background-color: #fff;
+      border-left: 5px solid #28a745;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 4px;
+    }
+
+    .info-box i {
+      color: #28a745;
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #000;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .cta {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>How Payment Works</h1>
+    <p>This is our MVP. Please follow instructions carefully. Your feedback shapes the main version.</p>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>1. Talk to a Teacher First</h2>
+      <p>Before making any payment, reach out to the teacher you're interested in learning from. You can message them directly on WhatsApp from their profile.</p>
+    </section>
+
+    <section class="section">
+      <h2>2. Receive Payment Instructions</h2>
+      <p>If the teacher confirms availability, we (or the teacher) will share a local bank account number with you via WhatsApp. Payments are done directly, not through the site (for now).</p>
+    </section>
+
+    <section class="section">
+      <h2>3. Send Proof of Payment</h2>
+      <p>
+        After you complete the transfer, kindly send your <strong>payment proof (screenshot or transfer confirmation)</strong> via WhatsApp.
+        This helps us or your teacher confirm and schedule your lesson faster.
+      </p>
+
+      <div class="info-box">
+        <i class="fas fa-check-circle"></i>
+        <strong>✅ Recommended Message:</strong><br>
+        <em>“Hi, I’ve made the payment for my lesson. Here’s my proof of payment. Thank you!”</em>
+      </div>
+
+      <br>
+      <a href="https://wa.me/234XXXXXXXXXX" class="cta" target="_blank">
+        Send Proof via WhatsApp
+      </a>
+    </section>
+
+    <section class="section">
+      <h2>4. What Happens Next?</h2>
+      <p>Once payment is confirmed, your class will be officially scheduled by the teacher. You’ll receive a WhatsApp message confirming the time and mode of delivery (online or in-person).</p>
+    </section>
+
+    <section class="section">
+      <h2>Need Help?</h2>
+      <p>If something goes wrong or you need clarity, don’t hesitate to reach out to our support team.</p>
+      <p>Email (optional): <strong>support@skillup.com</strong></p>
+      <p>WhatsApp (fastest): <strong>+234 XXX XXX XXXX</strong></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Skill Up. All rights reserved. | MVP Version — Help us improve!
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skill Up – Learn with Skill Up</title>
+  <link rel="stylesheet" href="anim.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* General Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: lavender;
+    }
+
+    /* Header */
+    .head {
+      text-align: center;
+      background-color: #a3fff4;
+      padding: 10px;
+    }
+
+    .logo {
+      height: 6vh;
+    }
+
+    span a {
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      color: black;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: #a3fff4;
+      padding: 3rem 1rem;
+      text-align: center;
+      height: 60vh;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      color: black;
+    }
+
+    .hero p {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      color: #222;
+      padding-bottom: 20px;
+    }
+
+    .hero .cta-btn {
+      background-color: black;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+ .hero .cta-btn:hover{
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+ }
+    /* BENEFITS SECTION */
+    .benefits {
+      background: #e7fcfc;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .benefits h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: #222;
+    }
+
+    .benefit-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .card i {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* SECTION 2: Register CTA */
+    .register-learn {
+      background: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      height: 44vh;
+    }
+
+    .register-learn h2 {
+      font-size: 1.6rem;
+      color: #111;
+    }
+    .register-learn p{
+        margin-bottom: 2rem;
+    }
+
+    .register-learn a {
+      background-color: black;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+
+    }
+    .register-learn a:hover{
+        background-color: lightgray;
+        color: black;
+        transition: 0.5s;
+    }
+
+    /* Footer */
+    .footer {
+      background: #a3fff4;
+      color: black;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .footer-links {
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: black;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .footer-links a {
+        display: inline-block;
+        margin: 0.5rem 0;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="head">
+  <div class="logos">
+    <img src="images/bglogo.png" alt="Skill Up Logo" class="logo">
+  </div>
+  <span>
+    <a href="learner.html">Learn</a>
+    <a href="teacher.html">Teach</a>
+    <a href="index.html">Grow</a>
+  </span>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero reveal fade-up">
+  <h1>Learn a Skill. Change Your Life.</h1>
+  <p>Connect with real people — not apps — and start learning online or in your area today.</p>
+  <a href="learner-acc.html" class="cta-btn">Create Your Learner Profile</a>
+</section>
+
+<!-- BENEFITS SECTION -->
+<section class="benefits reveal slide-up">
+  <h2>Why Learn With Skill Up?</h2>
+  <div class="benefit-cards">
+
+    <div class="card">
+      <i class="fas fa-user-check"></i>
+      <h3>Trusted Local Tutors</h3>
+      <p>Every teacher is screened and verified — so you’re not learning from just anybody. Skill Up tutors are real people from your community.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h3>Online or In-Person</h3>
+      <p>Learn from home, meet at a café, or take virtual classes. It’s up to you — we keep it flexible and convenient.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-wallet"></i>
+      <h3>Pay-as-You-Can Learning</h3>
+      <p>Only pay for what you need. No big bills. Many teachers offer affordable or negotiable sessions — especially for students.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-clock"></i>
+      <h3>Learn on Your Time</h3>
+      <p>Classes that fit your schedule. Whether you're free mornings, evenings, or weekends — there's something for you.</p>
+    </div>
+
+  <div class="card">
+  <i class="fas fa-users"></i>
+  <h3>Growing Learning Community</h3>
+  <p>Join hundreds of learners already building new skills across Nigeria. Learn, grow, and share.</p>
+</div>
+
+
+  </div>
+</section>
+
+<!-- REGISTER CTA -->
+<section class="register-learn reveal in-view fade-up">
+  <h2>Start Learning Skills That Actually Matter</h2>
+  <p>Create your free learner profile today and get access to affordable, practical skills — from real Nigerians like you. No long grammar, just results.</p>
+  <a href="learner-acc.html" class="cta-btn">Join Skill Up</a>
+  <a href="learn.html" class="cta-btn">Explore Skills</a>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Add a Skill</a>
+    <a href="learn.html">Learn a Skill</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p style="font-size: 1rem;">
+            You’re viewing the <strong>Skill Up MVP (Minimum Viable Product)</strong>. We’re testing, improving, and
+            building the full platform — and your feedback will shape the future of Skill Up.
+        </p>
+        <p>
+       Got ideas or issues?<a href="contact.html" style="color: #111;">Tell us.</a> Your voice matters.
+        </p>
+  <p>&copy; 2025 Skill Up. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Skill Up Works – Guide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #fff; color: #222;">
+
+  <!-- DEFAULT NAVBAR -->
+  <header style="background-color: #000; padding: 20px; color: #fff;">
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" style="text-decoration: none; color: #fff; font-weight: bold; font-size: 1.4em;">Skill Up</a>
+      <div style="display: flex; gap: 20px;">
+        <a href="index.html" style="color: #fff; text-decoration: none;">Home</a>
+        <a href="about.html" style="color: #fff; text-decoration: none;">About</a>
+        <a href="guide.html" style="color: #fff; text-decoration: underline;">How It Works</a>
+        <a href="register.html" class="cta-btn" style="color: #fff; border: 1px solid #fff; padding: 8px 16px; border-radius: 4px; text-decoration: none; transition: all 0.3s;">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section style="padding: 60px 20px; text-align: center; background-color: #f0faff;">
+    <h1 style="font-size: 2.5em; margin-bottom: 10px;">How Skill Up Works</h1>
+    <p style="font-size: 1.1em; max-width: 700px; margin: 0 auto;">Whether you're here to teach or to learn, Skill Up gives you the tools and support to connect, grow, and succeed.</p>
+  </section>
+
+  <!-- VISUAL BLOCKS -->
+  <section style="padding: 50px 20px; background-color: #fff;">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+
+      <div style="flex: 1 1 250px; text-align: center; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
+        <i class="fas fa-user-plus" style="font-size: 2.5em; color: #0a677c;"></i>
+        <h3 style="margin-top: 15px;">1. Sign Up</h3>
+        <p>Create a free account. Choose whether you want to teach, learn, or both.</p>
+        <a href="register.html" style="display: inline-block; margin-top: 10px; text-decoration: none; color: #0a677c; font-weight: bold;">Register Now</a>
+      </div>
+
+      <div style="flex: 1 1 250px; text-align: center; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
+        <i class="fas fa-pencil-ruler" style="font-size: 2.5em; color: #0a677c;"></i>
+        <h3 style="margin-top: 15px;">2. Create Your Profile</h3>
+        <p>Set up your teacher profile or learning needs. Add your skills, interests, and availability.</p>
+        <a href="register.html" style="display: inline-block; margin-top: 10px; text-decoration: none; color: #0a677c; font-weight: bold;">Get Started</a>
+      </div>
+
+      <div style="flex: 1 1 250px; text-align: center; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
+        <i class="fas fa-handshake" style="font-size: 2.5em; color: #0a677c;"></i>
+        <h3 style="margin-top: 15px;">3. Connect & Book</h3>
+        <p>Learners find local teachers. Teachers approve bookings. Easy and secure communication.</p>
+        <a href="register.html" style="display: inline-block; margin-top: 10px; text-decoration: none; color: #0a677c; font-weight: bold;">Join the Network</a>
+      </div>
+
+      <div style="flex: 1 1 250px; text-align: center; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
+        <i class="fas fa-chalkboard-teacher" style="font-size: 2.5em; color: #0a677c;"></i>
+        <h3 style="margin-top: 15px;">4. Teach & Learn</h3>
+        <p>Use your dashboard to manage lessons, chat, and grow your brand as a teacher.</p>
+        <a href="register.html" style="display: inline-block; margin-top: 10px; text-decoration: none; color: #0a677c; font-weight: bold;">Start Today</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section style="background-color: #0a677c; color: white; text-align: center; padding: 50px 20px;">
+    <h2 style="font-size: 2em; margin-bottom: 15px;">Ready to Join the Movement?</h2>
+    <p style="max-width: 700px; margin: 0 auto 20px;">Whether you want to share your skills or discover something new, Skill Up is the place to begin.</p>
+    <a href="register.html" style="background-color: #fff; color: #0a677c; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s;">Create Your Free Account</a>
+  </section>
+
+  <!-- DEFAULT FOOTER -->
+  <footer style="background-color: #000; color: #fff; text-align: center; padding: 30px 20px;">
+    <p style="margin-bottom: 10px;">&copy; 2025 Skill Up. All rights reserved.</p>
+    <div style="font-size: 1.1em;">
+      <a href="terms.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Terms</a> |
+      <a href="privacy.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Privacy</a> |
+      <a href="contact.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero reveal slide-up" style="padding: 60px 20px; text-align: center; background-color: #a3fff4;">
+<h1>Welcome to Skill Up!</h1>
+<p>Skill Up connects learners with trusted local teachers—online or in person <br>
+  to make learning accessible, flexible, and community-driven. <br>
+   This guide explains how to use the platform effectively and what’s expected from every user.</p>
+</section>
+
+
+<!-- welcome -->
+ <section class="well">
+<h1>For Learners</h1>
+
+ </section>

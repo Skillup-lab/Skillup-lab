@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teach on Skill Up</title>
+  <link rel="stylesheet" href="anim.css" />
+  <!-- Add this inside <head> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      background-color: #a3fff4;
+      text-align: center;
+      padding: 4rem 1rem;
+      height: auto;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero strong {
+      display: block;
+      font-weight: bolder;
+      font-size: 1.8;
+    }
+
+    .cta-btn {
+      background-color: black;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .features {
+      padding: 3rem 1rem;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    .features h2 {
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .feature-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      width: 280px;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    .cta-section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .cta-section a {
+      margin: 0.5rem;
+      display: inline-block;
+    }
+
+    /* Footer */
+    .footer {
+      background: #a3fff4;
+      color: black;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .footer-links {
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: black;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .footer-links a {
+        display: inline-block;
+      }
+
+      .feature-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .head {
+      text-align: center;
+      margin-bottom: 25px;
+      background-color: #a3fff4;
+      width: auto;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 0rem;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.6rem;
+      font-weight: bold;
+      height: 6vh;
+    }
+
+    span {
+      color: black;
+      font-size: 20px;
+      font-weight: bolder;
+      word-spacing: 10px;
+      padding-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .feature-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1.5rem;
+      margin: 2rem 1rem;
+    }
+
+    .feature-card {
+      flex: 1 1 200px;
+      max-width: 250px;
+      text-align: center;
+      padding: 1rem;
+      background-color: #f5fefe;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: #00b894;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="head">
+    <div class="logos">
+      <img src="images/bglogo.png" alt="Skill Up Logo" class="logo">
+    </div>
+    <span>
+      <a href="learner.html">Learn</a>
+      <a href="teacher.html">Teach</a>
+      <a href="index.html">Grow</a>
+    </span>
+  </header>
+
+  <!-- WELCOME NOTE FROM THE SKILL UP TEAM -->
+  <section class="section hero" style="padding: 60px 20px; text-align: center; background-color: #a3fff4;">
+    <h2 style="font-size: 2em; margin-bottom: 20px;">A Welcome Note From the Skill Up Team</h2>
+    <p style="max-width: 800px; margin: 0 auto; font-size: 1.1em; line-height: 1.7;">
+      Welcome to Skill Up — a grassroots learning platform proudly built in Nigeria, for Nigerians, by Nigerians. We're a passionate
+      team of everyday problem-solvers who saw one simple truth: there are people around us with valuable skills, and
+      others eager to learn — but no bridge connecting them.
+    </p>
+    <p style="max-width: 800px; margin: 20px auto 0; font-size: 1.2em; color: #444;">
+      This MVP is just the beginning. Our goal is to help you teach what you know, build a trusted brand as a local
+      tutor, and empower others in your community. Whether you’re a teacher or learner, this is your space to grow.
+      Thank you for being part of the Skill Up story.
+    </p>
+  </section>
+
+
+  <!-- SECTION 1: Why Teach With Skill Up -->
+<section class="features reveal slide-up">
+  <h2>Why Skill Up is Different</h2>
+  <div class="feature-cards">
+
+    <div class="feature-card">
+      <i class="fas fa-users" style="font-size: 40px; color: #00b894;"></i>
+      <h4>Real People. Real Learning.</h4>
+      <p>Forget pre-recorded videos — Skill Up connects learners with real humans: peers, mentors, and local guides who teach live and respond in real-time.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-laptop-code" style="font-size: 40px; color: #00b894;"></i>
+      <h4>Flexible & Personalized</h4>
+      <p>Classes happen online or in-person, and adapt to your pace, style, and schedule — so learning feels relevant and achievable.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-chalkboard-teacher" style="font-size: 40px; color: #00b894;"></i>
+      <h4>Teach What You Know</h4>
+      <p>No degree needed. If you have a skill — from baking to braiding to building websites — you can teach, earn, and impact lives in your community.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-handshake" style="font-size: 40px; color: #00b894;"></i>
+      <h4>Powered by Community</h4>
+      <p>Skill Up thrives on trust and local connection — learners share reviews, tutors get referrals, and everyone grows together.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 1: Why Teach With Skill Up -->
+<section class="features reveal slide-up">
+  <h2>Why Teach With Skill Up?</h2>
+  <div class="feature-cards">
+
+    <div class="feature-card">
+      <i class="fas fa-user-graduate feature-icon"></i>
+      <h3>We Bring Learners to You</h3>
+      <p>No stress of marketing yourself — we connect you with students nearby who want to learn your skill right now.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-calendar-alt feature-icon"></i>
+      <h3>You Set the Time & Price</h3>
+      <p>Decide how much you charge and when you teach. Whether it's evenings or weekends — you're in control.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-chalkboard-teacher feature-icon"></i>
+      <h3>Easy Lesson Tools</h3>
+      <p>Manage bookings, communicate on WhatsApp, and keep things organized — all with beginner-friendly tools.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-chart-line feature-icon"></i>
+      <h3>Grow Your Local Reputation</h3>
+      <p>Earn trust, get reviewed, and build your name as a go-to tutor in your area — even without a formal school.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- SECTION 2: Why Learn With Skill Up -->
+<section class="features reveal slide-up" style="background-color: #f9f9f9; padding: 40px 20px;">
+  <h2>Why Learn With Skill Up?</h2>
+  <div class="feature-cards">
+
+    <div class="feature-card">
+      <i class="fas fa-map-marker-alt feature-icon"></i>
+      <h3>Find Help Close to You</h3>
+      <p>From your street to your state, Skill Up connects you with nearby tutors who understand your environment and are ready to teach.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-wallet feature-icon"></i>
+      <h3>Affordable, Flexible Pricing</h3>
+      <p>Many of our tutors price their sessions with you in mind. Whether you're a student or job-seeker, there's room for your budget.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-user-friends feature-icon"></i>
+      <h3>Learn From People Like You</h3>
+      <p>Whether it’s a fellow student, a graduate, or an artisan — you're learning from someone who gets your reality and can break things down for you.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-bolt feature-icon"></i>
+      <h3>Learn What Matters Today</h3>
+      <p>No maths or boring theory here. We focus on practical skills — like tech, crafts, and useful everyday skills — and you get a certificate when you pass your exam.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- SECTION 3: Founder's Note -->
+<section class="features reveal slide-up" style="padding: 50px 20px; background-color:white; color: black; text-align: center;">
+  <div style="border-left: 10px solid black;border-right: 10px solid black;">
+  <h2>A Note From the Founder</h2>
+  <div style="max-width: 800px; margin: 0 auto; font-size: 1.1em; line-height: 1.8;">
+    <p>
+      I started Skill Up because I saw something powerful: a mother in her kitchen who knows how to bake the best cakes — but doesn’t know where to start teaching others. A student who’s great at math but can’t afford a tutor. A graduate who’s gifted with digital skills, sitting at home with no job — yet plenty of people around them need that knowledge.
+    </p>
+    <p>
+      Skill Up is not just a platform. It’s a movement. We believe anyone can teach. Anyone can learn. You don’t need a fancy classroom — you need a connection. Skill Up connects you to real people in your community, people with knowledge and passion, willing to help you rise.
+    </p>
+    <p>
+      Whether you're teaching or learning, Skill Up is your place to grow, share, and shine. Welcome to a future where skills are passed from hand to hand, neighbor to neighbor, and heart to heart.
+    </p>
+    <p style="font-style: italic; margin-top: 20px;">— The Founder, Skill Up</p>
+  </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Add a Skill</a>
+      <a href="learn.html">Learn a Skill</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p style="font-size: 1rem;">
+      You’re viewing the <strong>Skill Up MVP (Minimum Viable Product)</strong>. We’re testing, improving, and
+      building the full platform — and your feedback will shape the future of Skill Up.
+    </p>
+    <p>
+      Got ideas or issues?<a href="contact.html" style="color: #111;">Tell us.</a> Your voice matters.
+    </p>
+    <p>&copy; 2025 Skill Up. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

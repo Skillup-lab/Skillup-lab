@@ -1132,3 +1132,161 @@
 <h1>For Learners</h1>
 
  </section>
+
+
+
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Up Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .form-container {
+      background: white;
+      border: 3px solid orange;
+      border-radius: 12px;
+      padding: 30px 20px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(255, 165, 0, 0.2);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: orange;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 12px 15px;
+      font-size: 1rem;
+      border: 2px solid #ffd4a3;
+      border-radius: 8px;
+      outline: none;
+      transition: border 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: orange;
+    }
+
+    .form-group small {
+      color: red;
+      display: none;
+      margin-top: 4px;
+    }
+
+    .form-btn {
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .form-btn:hover {
+      background-color: darkorange;
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        border: 2px dashed orange;
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form class="form-container" id="skillUpForm" novalidate>
+    <h2>Join Skill Up</h2>
+
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <small>Name is required</small>
+    </div>
+
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Email Address" required />
+      <small>Valid email is required</small>
+    </div>
+
+    <div class="form-group">
+      <div style="display: flex; gap: 8px;">
+        <select id="countryCode" name="countryCode" required style="flex: 1;">
+          <option value="">+Code</option>
+          <option value="+1">🇺🇸 +1</option>
+          <option value="+44">🇬🇧 +44</option>
+          <option value="+234">🇳🇬 +234</option>
+          <option value="+91">🇮🇳 +91</option>
+          <option value="+81">🇯🇵 +81</option>
+          <option value="+61">🇦🇺 +61</option>
+          <option value="+49">🇩🇪 +49</option>
+          <!-- Add more codes as needed -->
+        </select>
+        <input type="tel" name="phone" placeholder="WhatsApp Number" pattern="[0-9]{7,15}" required style="flex: 2;" />
+      </div>
+      <small>Phone number is required</small>
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="location" placeholder="Your Country or City" required />
+      <small>Location is required</small>
+    </div>
+
+    <button type="submit" class="form-btn">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("skillUpForm");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let isValid = true;
+      const inputs = form.querySelectorAll("input, select");
+      inputs.forEach(input => {
+        const small = input.parentElement.querySelector("small");
+        if (!input.checkValidity()) {
+          isValid = false;
+          small.style.display = "block";
+        } else {
+          small.style.display = "none";
+        }
+      });
+
+      if (isValid) {
+        alert("Form submitted successfully!");
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>

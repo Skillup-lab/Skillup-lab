@@ -1,0 +1,13 @@
+:root{
+    --back:white;
+    --nav:linear-gradient(to left, blue,white);
+    --black:black;
+    --navre:white;
+    --text:black;
+    --cta:;
+      --head:BLACK;
+      --navtext:white;
+}
+p{
+    color: g;
+}

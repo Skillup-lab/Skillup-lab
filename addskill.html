@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skill Up – Add a Skill</title>
+  <link rel="stylesheet" href="anim.css" />
+  <link rel="icon" type="image/png" href="images/ChatGPT Image May 5, 2025, 12_54_09 AM.png">
+  <style>
+    /* Footer */
+    .footer {
+      background: #a3fff4;
+      color: black;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .footer-links {
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: black;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .footer-links a {
+        display: inline-block;
+      }
+    }
+
+    .head {
+      text-align: center;
+      margin-bottom: 25px;
+      background-color: #a3fff4;
+      width: auto;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 0rem;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.6rem;
+      font-weight: bold;
+      height: 6vh;
+    }
+
+    span {
+      color: black;
+      font-size: 20px;
+      font-weight: bolder;
+      word-spacing: 10px;
+      padding-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f1f1f1;
+      font-family: Raleway, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #regForm {
+      background: #fff;
+      margin: 5px auto;
+      padding: 10px;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      display: block;
+      font-family: Candara;
+      font-size: 40px;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    input.invalid {
+      background-color: #ffdddd;
+    }
+
+    .tab {
+      display: none;
+    }
+
+    button {
+      background-color: #006644;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin: 10px 5px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #prevBtn {
+      background-color: #aaa;
+    }
+
+    .step {
+      height: 15px;
+      width: 15px;
+      margin: 0 3px;
+      background-color: #bbbbbb;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+      padding: 9px;
+    }
+
+    .step.active {
+      opacity: 1;
+    }
+
+    .step.finish {
+      background-color: #006644;
+    }
+
+    .row-flex {
+      display: flex;
+      gap: 10px;
+    }
+
+    .row-flex>* {
+      flex: 1;
+    }
+
+    .rules a {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      border-bottom: 1px solid black;
+      color: slategrey;
+      text-align: center;
+      font-family: Calibri;
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 35px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="head">
+    <div class="logos">
+      <img src="images/bglogo.png" alt="Eco Spark Logo" class="logo">
+
+    </div>
+    <span>
+      <a href="learner.html">Learn</a>
+      <a href="teacher.html">Teach</a>
+      <a href="index.html">Grow</a>
+    </span>
+  </header>
+
+
+  <form id="regForm" action="">
+    <h1 class="slide-up">Skills Account</h1>
+    <h2 class="slide-up" style="color: #006644;">Earn by Teaching</h2>
+    <!-- One "tab" for each step in the form: -->
+    <div class="tab slide-up">
+      <label>Name / Institution</label>
+      <input type="text" name="confirmName" id="">
+
+      <label>Input Your Password</label>
+      <input type="password" id="myInput">
+      <input type="checkbox" onclick="myFunction()">Show Password
+
+    </div>
+
+
+
+    <div class="tab slide-up">
+      <label>What are you Teaching</label>
+      <input name="skills" placeholder="e.g. Tailoring, UI/UX" class="tag-input" required>
+
+      <label>Upload Certificates or Awards</label> <br>
+      <caption><i> ctrl + Shift to choose more files </i> </caption>
+      <input type="file" name="certificates" multiple accept="image/*,application/pdf">
+
+      <label>Course Intro</label>
+      <textarea name="bio" rows="4"
+        placeholder="Introduction to what you want to teach : Scheme / Eligibility etc"></textarea>
+        
+    </div>
+
+
+    <div class="tab slide-up">
+      <label>Available Days</label>
+      <select name="days" id="days" multiple size="7" required>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select>
+
+      <!-- Time Range -->
+      <label>Available Time</label>
+      <div style="display: flex; gap: 10px;">
+        <input type="time" id="startTime" name="startTime" required>
+        <span style="align-self: center;">to</span>
+        <input type="time" id="endTime" name="endTime" required>
+      </div>
+
+      <!-- Hidden input to store full result -->
+      <input type="hidden" name="availability" id="availability">
+
+      <div class="row-flex">
+        <input type="text" name="rate_amount" placeholder="₦5000 / Free" min="0" required>
+
+        <input type="text" name="rate_duration" placeholder="3 weeks" required>
+      </div>
+
+    </div>
+
+
+
+    <div class="tab slide-up">
+
+      <label>Preferred Teaching Method</label><br>
+      Online <input type="radio" name="method" value="Online" required>
+      In-Person <input type="radio" name="method" value="In-Person" required>
+      Both <input type="radio" name="method" value="Both" required>
+
+      <br>
+      <label>Do you have a physical marketplace for students to come?</label><br>
+      <input type="radio" name="marketplace" value="Yes" onclick="toggleMap(true)"> Yes <br>
+      <input type="radio" name="marketplace" value="No" onclick="toggleMap(false)">No
+
+      <div id="mapBox" style="display:none;">
+        <label>Training Location</label> <br>
+        <iframe src="https://maps.google.com/maps?q=Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          style="min-width: 25%;width: 100%;"></iframe>
+      </div>
+
+      <strong>
+        <p>Reminder:You will take a short test On this Course You are about to teach. We’ll contact you with the details
+          you Provided.</p><br>
+        <p><b>Guide:</b> Each Skill you intend to teach. <u>Must</u> have a Skill Account <br>
+        <p>Create more Skill Account from the Footer Section (<a href="skills.html
+          ">Add a Skill</a> )</p>
+        </p>
+      </strong>
+    </div>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+
+
+
+    <!-- Step Circles -->
+    <div style="text-align:center;margin-top:30px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+  </form>
+
+
+  <!-- FOOTER -->
+<footer style="background: #a3fff4; color: black; text-align: center; padding: 2rem 1rem; margin-top: 40px;">
+  <div style="margin-bottom: 1rem;">
+    <a href="index.html" style="color: black; margin: 0 1rem; text-decoration: none;">Home</a>
+    <a href="about.html" style="color: black; margin: 0 1rem; text-decoration: none;">About</a>
+    <a href="skills.html" style="color: black; margin: 0 1rem; text-decoration: none;">Add a Skill</a>
+    <a href="learn.html" style="color: black; margin: 0 1rem; text-decoration: none;">Learn a Skill</a>
+    <a href="contact.html" style="color: black; margin: 0 1rem; text-decoration: none;">Contact</a>
+  </div>
+  <p style="font-size: 1rem;">You’re viewing the <strong>Skill Up MVP (Minimum Viable Product)</strong>. We’re testing, improving, and building the full platform — and your feedback will shape the future of Skill Up.</p>
+  <p>Got ideas or issues? <a href="contact.html" style="color: #111;">Tell us.</a> Your voice matters.</p>
+  <p>&copy; 2025 Skill Up. All rights reserved.</p>
+</footer>
+
+
+  <script>
+
+    // Toggle map visibility
+    function toggleMap(show) {
+      document.getElementById('mapBox').style.display = show ? 'block' : 'none';
+    }
+
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the current tab
+
+    function showTab(n) {
+      // This function will display the specified tab of the form...
+      var x = document.getElementsByClassName("tab");
+      x[n].style.display = "block";
+      //... and fix the Previous/Next buttons:
+      if (n == 0) {
+        document.getElementById("prevBtn").style.display = "none";
+      } else {
+        document.getElementById("prevBtn").style.display = "inline";
+      }
+      if (n == (x.length - 1)) {
+        document.getElementById("nextBtn").innerHTML = "Submit";
+      } else {
+        document.getElementById("nextBtn").innerHTML = "Next";
+      }
+      //... and run a function that will display the correct step indicator:
+      fixStepIndicator(n)
+    }
+
+    function nextPrev(n) {
+      // This function will figure out which tab to display
+      var x = document.getElementsByClassName("tab");
+      // Exit the function if any field in the current tab is invalid:
+      if (n == 1 && !validateForm()) return false;
+      // Hide the current tab:
+      x[currentTab].style.display = "none";
+      // Increase or decrease the current tab by 1:
+      currentTab = currentTab + n;
+      // if you have reached the end of the form...
+      if (currentTab >= x.length) {
+        // ... the form gets submitted:
+        document.getElementById("regForm").submit();
+        return false;
+      }
+      // Otherwise, display the correct tab:
+      showTab(currentTab);
+    }
+
+    function validateForm() {
+      // This function deals with validation of the form fields
+      var x, y, i, valid = true;
+      x = document.getElementsByClassName("tab");
+      y = x[currentTab].getElementsByTagName("input");
+      // A loop that checks every input field in the current tab:
+      for (i = 0; i < y.length; i++) {
+        // If a field is empty...
+        if (y[i].value == "") {
+          // add an "invalid" class to the field:
+          y[i].className += " invalid";
+          // and set the current valid status to false
+          valid = false;
+        }
+      }
+      // If the valid status is true, mark the step as finished and valid:
+      if (valid) {
+        document.getElementsByClassName("step")[currentTab].className += " finish";
+      }
+      return valid; // return the valid status
+    }
+
+    function fixStepIndicator(n) {
+      // This function removes the "active" class of all steps...
+      var i, x = document.getElementsByClassName("step");
+      for (i = 0; i < x.length; i++) {
+        x[i].className = x[i].className.replace(" active", "");
+      }
+      //... and adds the "active" class on the current step:
+      x[n].className += " active";
+    }
+    const daysSelect = document.getElementById("days");
+    const startTime = document.getElementById("startTime");
+    const endTime = document.getElementById("endTime");
+    const availabilityInput = document.getElementById("availability");
+
+    function updateAvailability() {
+      const selectedDays = Array.from(daysSelect.selectedOptions).map(opt => opt.value).join(", ");
+      const timeRange = `${startTime.value} - ${endTime.value}`;
+      availabilityInput.value = selectedDays && startTime.value && endTime.value
+        ? `${selectedDays} / ${timeRange}`
+        : "";
+    }
+
+    daysSelect.addEventListener("change", updateAvailability);
+    startTime.addEventListener("change", updateAvailability);
+    endTime.addEventListener("change", updateAvailability);
+
+  </script>
+
+</body>
+
+</html>

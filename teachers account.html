@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Up – Create Teachers Account</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="anim.css">
+    <link rel="icon" type="image/png" href="images/ChatGPT Image May 5, 2025, 12_54_09 AM.png">
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
+    <style>
+        /* Footer */
+        .footer {
+            background: #a3fff4;
+            color: black;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: black;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .footer-links a {
+                display: inline-block;
+            }
+        }
+
+        .head {
+            text-align: center;
+            margin-bottom: 25px;
+            background-color: #a3fff4;
+            width: auto;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 0rem;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.6rem;
+            font-weight: bold;
+            height: 6vh;
+        }
+
+        span {
+            color: black;
+            font-size: 20px;
+            font-weight: bolder;
+            word-spacing: 10px;
+            padding-bottom: 10px;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            font-family: Raleway, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #regForm {
+            background: #fff;
+            margin: 5px auto;
+            padding: 10px;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            display: block;
+            font-family: Candara;
+            font-size: 40px;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        input.invalid {
+            background-color: #ffdddd;
+        }
+
+        .tab {
+            display: none;
+        }
+
+        button {
+            background-color: #006644;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 10px 5px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        #prevBtn {
+            background-color: #aaa;
+        }
+
+        .step {
+            height: 15px;
+            width: 15px;
+            margin: 0 3px;
+            background-color: #bbbbbb;
+            border-radius: 50%;
+            display: inline-block;
+            opacity: 0.5;
+        }
+
+        .step.active {
+            opacity: 1;
+        }
+
+        .step.finish {
+            background-color: #006644;
+        }
+
+        .row-flex {
+            display: flex;
+            gap: 10px;
+        }
+
+        .row-flex>* {
+            flex: 1;
+        }
+
+        .rules a {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            border-bottom: 1px solid black;
+            color: slategrey;
+            text-align: center;
+            font-family: Calibri;
+            font-size: 28px;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 35px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="head">
+        <div class="logos">
+            <img src="images/bglogo.png" alt="Eco Spark Logo" class="logo">
+
+        </div>
+        <span>
+            <a href="learner.html">Learn</a>
+            <a href="teacher.html">Teach</a>
+            <a href="index.html">Grow</a>
+        </span>
+    </header>
+
+<form id="regForm" action="skills.html" style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
+  <h1 class="slide-up" style="text-align: center; margin-bottom: 20px; color: #006644;">Tutors Profile</h1>
+
+  <!-- Step 1 -->
+  <div class="tab slide-up" style="margin-bottom: 30px;">
+    <h2>Personal Info</h2>
+
+    <label>Full Name / Institution</label>
+    <input type="text" name="full_name" placeholder="Your full name or business" oninput="this.className=''" required
+      style="width: 100%; padding: 10px; margin-bottom: 15px;">
+
+    <label style="font-size: 16px;">Choose Your Gender</label><br>
+    <label><input type="radio" name="gender" value="Male" style="margin-right: 5px;">Male</label>
+    <label style="margin-left: 15px;"><input type="radio" name="gender" value="Female" style="margin-right: 5px;">Female</label><br><br>
+
+    <label>WhatsApp Number</label>
+    <input type="tel" name="phone" placeholder="+234 xxx xxx xxxx" oninput="this.className=''" required
+      style="width: 100%; padding: 10px; margin-bottom: 15px;">
+
+    <label>Email Address (optional)</label>
+    <input type="email" name="email" placeholder="example@email.com"
+      style="width: 100%; padding: 10px; margin-bottom: 15px;">
+
+    <label>City / Location</label><br>
+    <iframe src="https://maps.google.com/maps?q=Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      style="width: 100%; height: 250px; border: 1px solid #ccc; margin-top: 10px;"></iframe>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="tab slide-up" style="margin-bottom: 30px;">
+    <h2>Profile & Access</h2>
+
+    <label>Create Password</label>
+    <input type="password" id="myInput" required
+      style="width: 100%; padding: 10px; margin-bottom: 10px;">
+    <label style="font-size: 14px;">
+      <input type="checkbox" onclick="myFunction()"> Show Password
+    </label><br><br>
+
+    <label>Short Bio</label>
+    <textarea name="bio" rows="4" placeholder="Tell us about yourself and teaching style."
+      style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea>
+
+    <label>Portfolio/Instagram Link (optional)</label>
+    <input type="url" name="portfolio" placeholder="https://instagram.com/yourpage"
+      pattern="https?://.+" title="Please enter a valid URL"
+      style="width: 100%; padding: 10px; margin-bottom: 15px;">
+
+    <label>How did you hear of Skill Up?</label>
+    <select name="advert" required
+      style="width: 100%; padding: 10px; margin-bottom: 15px;">
+      <option value="Linkedin">LinkedIn</option>
+      <option value="Friends">Friends</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Others" selected>Others</option>
+    </select>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="tab slide-up" style="margin-bottom: 30px;">
+    <h2>Almost Done</h2>
+    <label style="font-size: 16px;">
+      <input type="checkbox" name="toolkit" required style="margin-right: 8px;">Receive the Skill Up Starter Toolkit
+    </label>
+
+    <p style="margin-top: 15px;">Thanks for joining us. We’ll contact you with your details for further guidance.</p>
+
+    <div class="rules" style="margin-top: 15px;">
+      <p>By filling this form, you agree with our teachers <a href="#" class="rulea">Terms & Guide</a></p>
+      <label>
+        <input type="checkbox" id="agreeCheckbox" name="rules" required style="margin-right: 8px;">
+        I agree to the terms and conditions
+      </label>
+    </div>
+  </div>
+
+  <!-- Nav Buttons -->
+  <div style="overflow: auto; text-align: right;">
+    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+  </div>
+</form>
+
+        <!-- Step Circles -->
+        <div style="text-align:center;margin-top:30px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+    </form>
+
+    <footer class="footer
+    ">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Add a Skill</a>
+            <a href="learn.html">Learn a Skill</a>
+            <a href="contact.html">Contact</a>
+        </div>
+ <p style="font-size: 1rem;">
+            You’re viewing the <strong>Skill Up MVP (Minimum Viable Product)</strong>. We’re testing, improving, and
+            building the full platform — and your feedback will shape the future of Skill Up.
+        </p>
+        <p>
+       Got ideas or issues?<a href="contact.html" style="color: #111;">Tell us.</a> Your voice matters.
+        </p>
+  <p>&copy; 2025 Skill Up. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentTab = 0;
+        showTab(currentTab);
+
+        function showTab(n) {
+            let x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            document.getElementById("prevBtn").style.display = n === 0 ? "none" : "inline";
+            document.getElementById("nextBtn").innerHTML = n === (x.length - 1) ? "Submit" : "Next";
+            fixStepIndicator(n);
+        }
+
+        function nextPrev(n) {
+            let x = document.getElementsByClassName("tab");
+            if (n === 1 && !validateForm()) return false;
+            x[currentTab].style.display = "none";
+            currentTab += n;
+            if (currentTab >= x.length) {
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            let x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+
+            // Check every input in the current tab
+            for (i = 0; i < y.length; i++) {
+                if (y[i].hasAttribute("required") && y[i].value === "") {
+                    y[i].className += " invalid";
+                    valid = false;
+                }
+            }
+
+            // Additional check: if we are at the last step, make sure checkbox is checked
+            if (currentTab === x.length - 1) {
+                let checkbox = document.getElementById("agreeCheckbox");
+                if (!checkbox.checked) {
+                    alert("You must agree to the terms before submitting.");
+                    valid = false;
+                }
+            }
+
+            return valid;
+        }
+
+
+        function fixStepIndicator(n) {
+            let steps = document.getElementsByClassName("step");
+            for (let i = 0; i < steps.length; i++) {
+                steps[i].classList.remove("active");
+            }
+            steps[n].classList.add("active");
+        }
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

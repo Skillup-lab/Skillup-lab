@@ -29,6 +29,14 @@
         <a href="teacher-page.html">For Teachers</a>
         <a href="Guide.html">Guide</a>
         <a href="contact.html">Contact</a>
+
+        <!-- Authentication Links -->
+        <div class="auth-nav">
+          <span class="user-info" style="display: none;"></span>
+          <a href="login.html" class="guest-only">Login</a>
+          <a href="register.html" class="guest-only">Register</a>
+          <a href="#" class="auth-required logout-btn" style="display: none;">Logout</a>
+        </div>
       </nav>
 
       <button class="menu-icon" id="menuToggle" aria-label="Toggle menu">
@@ -322,6 +330,8 @@
 </footer>
 
 
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');

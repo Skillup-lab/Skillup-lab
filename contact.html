@@ -1,93 +1,692 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact – Skill Up</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <link rel="stylesheet" href="anim.css">
-   <link rel="icon" type="image/png" href="images/ChatGPT Image May 5, 2025, 12_54_09 AM.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Acadence</title>
+      <meta name="description" content="Acadence is a global EdTech platform connecting learners, educators, and skilled individuals. Gain job-ready skills, teach with powerful tools, and share knowledge without borders.">
 
+    <link rel="icon" type="image/webp" href="images/logo.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: 'navy',
+                        purple: '#6C2DC7',
+                         purpl: 'purple',
+                        accent: 'white',
+                        nav:'gainsboro'
+                    }
+                }
+            }
+        }
+    </script>
+
+
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            transform: translateY(-2px);
+        }
+        
+    
+        .floating-shape {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-shape:nth-child(2) {
+            animation-delay: -2s;
+        }
+        
+        .floating-shape:nth-child(3) {
+            animation-delay: -4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(120deg); }
+            66% { transform: translateY(10px) rotate(240deg); }
+        }
+        
+        .success-animation {
+            animation: successPulse 0.6s ease-out;
+        }
+        
+        @keyframes successPulse {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .theme-toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: #e5e7eb;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle.dark {
+            background: #374151;
+        }
+        
+        .theme-toggle::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-toggle.dark::before {
+            transform: translateX(30px);
+            background: #1f2937;
+        }
+        
+        .contact-method {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .section-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+            .logo {
+            height: 30%;
+            width: 100px;
+            margin-top: 5px;
+        }
+         .nav a{
+            margin-top: 27px;
+            font-size: 17px;
+        }
+        .nav button{
+               margin-top: 27px;
+            font-size: 14px;
+        }
+        nav{
+            height: 15%;
+        }
+        .cta{
+            margin: 17px;
+            border-radius: 30%;
+            border: 2px solid white;
+        }
+           @media (max-width: 768px){
+
+               .logo{
+            margin-left: 20px;
+            margin-top: 30px;
+         }
+         nav{
+    height: 11.5%;
+}
+#mobile-menu-btn{
+    margin-top: 42px;
+         }
+         #mobile-menu a{
+font-size: 1.6rem;
+         }
+                  #mobile-menu button{
+font-size: 1.1rem;
+display: inline;
+         }
+           }
+    </style>
 </head>
-<body style="margin: 0; padding: 0; font-family: Raleway, sans-serif; background-color: #f1f1f1;">
-
-<!-- HEADER -->
-<header style="text-align: center; background-color: #a3fff4; border-radius: 10px; padding: 10px;">
-  <div class="logos">
-    <img src="images/bglogo.png" alt="Skill Up Logo" style="height: 6vh;">
-  </div>
-  <span style="color: black; font-size: 20px; font-weight: bolder; word-spacing: 10px;">
-    <a href="learner-acc.html" style="color: black; text-decoration: none;">Learn</a>
-    <a href="teacher.html" style="color: black; text-decoration: none;">Teach</a>
-    <a href="index.html" style="color: black; text-decoration: none;">Grow</a>
-  </span>
-</header>
-
-<!-- CONTACT SECTION -->
-<section style="background-color: #f9f9f9; padding: 50px 20px; font-family: sans-serif;">
-  <div style="max-width: 1100px; margin: auto; text-align: center;">
-    <h1 style="font-size: 2.5rem; color: #006644; margin-bottom: 10px;">Contact Skill Up</h1>
-    <p style="font-size: 1.1rem; color: #333; margin-bottom: 40px;">
-      Questions? Suggestions? Collaborations?  <br> Fill out the form below or reach out via WhatsApp for the fastest reply.
-    </p>
-  </div>
-
-  <!-- INFO + MAP -->
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; max-width: 1100px; margin: auto; margin-bottom: 40px;">
-    <!-- CONTACT INFO -->
-    <div style="flex: 1 1 300px; padding: 10px;">
-      <h3 style="color: #006644;">Reach Us</h3>
-      <p><strong>Email:</strong><a href="mailto:">skillupteam.com@gmail.com</a></p>
-      <p><strong>WhatsApp (Fastest):</strong><a href="https://wa.me/234XXXXXXXXXX"></a> </p>
-      <p><strong>Office Hours:</strong> Mon–Sat, 9am–6pm</p>
-      <div style="margin-top: 20px;">
-        <h4 style="color: #006644;">Follow Us</h4>
-        <div style="font-size: 1.5rem; margin-top: 10px;">
-          <a href="https://web.facebook.com/profile.php?id=61578695518723" style="margin-right: 15px; color: #006644;"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://x.com/SkillUpnajia" style="margin-right: 15px; color: #006644;"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/skillup_najia/" style="margin-right: 15px; color: #006644;"><i class="fab fa-instagram"></i></a>
-          <a href="#" style="margin-right: 15px; color: #006644;"><i class="fab fa-linkedin-in"></i></a>
+<body class="bg-accent text-navy">
+<!-- Navigation -->
+    <nav class="bg-accent shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-accent"><img class="logo" src="images/logo.webp" alt=""></h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 nav">
+                    <div class="flex items-baseline space-x-4">
+                        <a href="index.html" class="text-navy hover:text-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="student.html" class="text-navy hover:text-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">Learners</a>
+                        <a href="teacher.html" class="text-navy hover:text-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">Tutor</a>
+                        <a href="partner.html" class="text-navy hover:text-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">NGO Hub</a>
+                           <a href="contact.html" class="text-navy hover:text-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                    <div class="flex items-center space-x-3 ml-6">
+                        <button class="text-navy hover:text-purple px-4 py-2 rounded-md text-sm font-medium transition-colors border border-navy/30"><a href="login.html">Log in</a></button>
+                        <button class="bg-purple hover:bg-purple/90 text-accent px-4 py-2 rounded-md text-sm font-medium transition-colors"><a href="signup.html">Sign Up</a></button>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-navy hover:text-navy relative z-50">
+                        <svg id="hamburger-icon" class="h-8 w-8 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" class="h-8 w-8 hidden transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+        <!-- Mobile menu overlay -->
+        <div id="mobile-menu" class="md:hidden fixed inset-0 bg-accent/95 backdrop-blur-sm transform translate-x-full transition-transform duration-300 ease-in-out z-40">
+            <div class="flex flex-col justify-center items-center h-full space-y-8">
+                <a href="index.html" class="text-navy hover:text-purple text-2xl font-medium transition-colors mobile-nav-link">Home</a>
+                <a href="student.html" class="text-navy hover:text-purple text-2xl font-medium transition-colors mobile-nav-link">Learners</a>
+                <a href="teacher.html" class="text-navy hover:text-purple text-2xl font-medium transition-colors mobile-nav-link">Tutors</a>
+                <a href="partner.html" class="text-navy hover:text-purple text-2xl font-medium transition-colors mobile-nav-link">NGO Hub</a>
+  <a href="contact.html`" class="text-navy hover:text-purple text-2xl font-medium transition-colors mobile-nav-link">Contact</a>
+                <div class="flex flex-col space-y-4 mt-8 mobilelog" style="display: inline;font-size: 30px;">
+                    <button class="text-navy hover:text-navy px-6 py-3 rounded-md text-xl font-medium transition-colors border border-purple"><a href="login.html">Log in</a></button>
+                    <button class="bg-navy hover:bg-navy/90 text-accent px-6 py-3 rounded-md text-lg font-medium transition-colors"><a href="signup.html">Sign Up</a></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="bg-navy py-20 text-white relative overflow-hidden min-h-screen flex items-center pt-16">
+        <!-- Floating Shapes -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full"></div>
+            <div class="floating-shape absolute top-40 right-20 w-16 h-16 bg-white/10 rounded-lg"></div>
+            <div class="floating-shape absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="section-fade max-w-4xl mx-auto">
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Get in Touch
+                    <span class="block text-purple-light">With Acadence</span>
+                </h1>
+                
+                <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                    Have questions about our courses, need support, or want to partner with us? We'd love to hear from you and help you on your learning journey.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <button onclick="scrollToForm()" class="bg-white text-navy px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
+                        Send Message
+                    </button>
+                    <button onclick="scrollToInfo()" class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-colors">
+                        Contact Info
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Methods -->
+    <section id="contact-info" class="py-16 theme-transition bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="section-fade">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Multiple Ways to Reach Us</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                        Choose the method that works best for you
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Email -->
+                    <div class="contact-card theme-transition bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl">
+                        <div class="w-16 h-16 bg-gradient-to-r from-navy to-purple rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Email Us</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Get detailed responses to your questions</p>
+                        <a href="mailto:hello@acadence.com" class="text-purple font-semibold hover:text-purple-light transition-colors">
+                            hello@acadence.com
+                        </a>
+                    </div>
+                    
+                    <!-- Phone -->
+                    <div class="contact-card theme-transition bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl">
+                        <div class="w-16 h-16 bg-gradient-to-r from-navy to-purple rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Call Us</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Speak directly with our support team</p>
+                        <a href="tel:+2348123456789" class="text-purple font-semibold hover:text-purple-light transition-colors">
+                            +234 812 345 6789
+                        </a>
+                    </div>
+                    
+                    <!-- Live Chat -->
+                    <div class="contact-card theme-transition bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl">
+                        <div class="w-16 h-16 bg-gradient-to-r from-navy to-purple rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Live Chat</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Get instant help from our team</p>
+                        <button class="text-purple font-semibold hover:text-purple-light transition-colors">
+                            Start Chat
+                        </button>
+                    </div>
+                    
+                    <!-- Office -->
+                    <div class="contact-card theme-transition bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl">
+                        <div class="w-16 h-16 bg-gradient-to-r from-navy to-purple rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Visit Us</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Come see us in person</p>
+                        <p class="text-purple font-semibold">
+                            Lagos, Nigeria
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form -->
+    <section id="contact-form" class="py-16 theme-transition bg-navy">
+        <div class="container mx-auto px-4">
+            <div class="section-fade max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Send Us a Message</h2>
+                    <p class="text-xl text-white max-w-2xl mx-auto">
+                        Fill out the form below and we'll get back to you within 24 hours
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="theme-transition bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl">
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                        First Name *
+                                    </label>
+                                    <input type="text" id="firstName" name="firstName" required
+                                           class="form-input w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent theme-transition bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                        Last Name *
+                                    </label>
+                                    <input type="text" id="lastName" name="lastName" required
+                                           class="form-input w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent theme-transition bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                    Email Address *
+                                </label>
+                                <input type="email" id="email" name="email" required
+                                       class="form-input w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent theme-transition bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                    Phone Number
+                                </label>
+                                <input type="tel" id="phone" name="phone"
+                                       class="form-input w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent theme-transition bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                    Subject *
+                                </label>
+                                <select id="subject" name="subject" required
+                                        class="form-input w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent theme-transition bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="courses">Course Information</option>
+                                    <option value="tutoring">Tutoring Services</option>
+                                    <option value="ngo">NGO Partnership</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="billing">Billing Question</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                    Message *
+                                </label>
+                                <textarea id="message" name="message" rows="5" required
+                                          placeholder="Tell us how we can help you..."
+                                          class="form-input w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent theme-transition bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none"></textarea>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <input type="checkbox" id="newsletter" name="newsletter"
+                                       class="mt-1 w-4 h-4 text-purple bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded focus:ring-purple">
+                                <label for="newsletter" class="text-sm text-gray-600 dark:text-gray-300">
+                                    I'd like to receive updates about new courses and features from Acadence
+                                </label>
+                            </div>
+                            
+                            <button type="submit" 
+                                    class="w-full bg-gradient-to-r from-navy to-purple text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-navy-dark hover:to-purple-light transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                        
+                        <!-- Social Links -->
+                        <div class="theme-transition bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Follow Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://www.instagram.com/acadenceteam/" class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white hover:bg-blue-600 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-pink-500 rounded-lg flex items-center justify-center text-white hover:bg-pink-600 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center text-white hover:bg-blue-800 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+         <!-- Footer -->
+    <footer class="bg-white text-navy py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-navy mb-4">Acadence</h3>
+                    <p class="text-navy">  Partnering with organizations worldwide to make quality education accessible to every child in Africa. Together, we're building a brighter future.</p>
+                        </div>
+                    </div>
+                       <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-navy/10 rounded-lg flex items-center justify-center hover:bg-gray transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-navy/10 rounded-lg flex items-center justify-center hover:bg-gray transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-navy/10 rounded-lg flex items-center justify-center hover:bg-gray transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-navy/10 rounded-lg flex items-center justify-center hover:bg-gray transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Partnership -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+  <li><a href="index.html" class="hover:text-navy transition-colors">Home</a></li>
+                                 <li><a href="about.html" class="hover:text-navy transition-colors">About</a></li>
+                         <li><a href="student.html" class="hover:text-navy transition-colors">Learners</a></li>
+                         <li><a href="teacher.html" class="hover:text-navy transition-colors">Tutor</a></li>
+                        <li><a href="partner.html" class="hover:text-navy transition-colors">Institution Hub</a></li>
+                        <li><a href="contact.html" class="hover:text-navy transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Jump to</h4>
+                    <ul class="space-y-2">
+                            <li><a href="#hero" class="hover:text-purple transition-colors">Home</a></li>
+                        <li><a href="#contact-info" class="hover:text-purple transition-colors">Contact info</a></li>
+                        <li><a href="#contact-form" class="hover:text-purple transition-colors">Contact Form</a></li>                          
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-8 pt-8 text-center">
+                <p class="text-navy-200">© 2025 Acadence. All rights reserved. | Empowering Education Across Africa</p>
+            </div>
+        </div>
+    </footer>
+  
+    <script>
+          // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        let isMenuOpen = false;
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                hamburgerIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
 
+        // Close mobile menu when clicking on nav links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+        });
 
-  <!-- CONTACT FORM -->
-  <div style="max-width: 700px; margin: auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
-    <form >
-      <label style="display: block; margin-bottom: 5px;">Full Name</label>
-      <input type="text" placeholder="Your name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;" />
-
-      <label style="display: block; margin-bottom: 5px;">Email Address</label>
-      <input type="email" placeholder="Your email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;" />
-
-      <label style="display: block; margin-bottom: 5px;">WhatsApp Number (Fastest)</label>
-      <input type="tel" placeholder="+234 801 234 5678" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;" />
-
-      <label style="display: block; margin-bottom: 5px;">Message</label>
-      <textarea placeholder="Write your message here..." rows="5" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
-
-      <button type="submit" style="background-color: #006644; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s;">
-        Send Message
-      </button>
-    </form>
-  </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer style="background: #a3fff4; color: black; text-align: center; padding: 2rem 1rem; margin-top: 40px;">
-  <div style="margin-bottom: 1rem;">
-    <a href="index.html" style="color: black; margin: 0 1rem; text-decoration: none;">Home</a>
-    <a href="about.html" style="color: black; margin: 0 1rem; text-decoration: none;">About</a>
-    <a href="skills.html" style="color: black; margin: 0 1rem; text-decoration: none;">Add a Skill</a>
-    <a href="learn.html" style="color: black; margin: 0 1rem; text-decoration: none;">Learn a Skill</a>
-    <a href="contact.html" style="color: black; margin: 0 1rem; text-decoration: none;">Contact</a>
-  </div>
-  <p style="font-size: 1rem;">You’re viewing the <strong>Skill Up MVP (Minimum Viable Product)</strong>. We’re testing, improving, and building the full platform — and your feedback will shape the future of Skill Up.</p>
-  <p>Got ideas or issues? <a href="contact.html" style="color: #111;">Tell us.</a> Your voice matters.</p>
-  <p>&copy; 2025 Skill Up. All rights reserved.</p>
-</footer>
-
-</body>
+        // Smooth scrolling functions
+        function scrollToForm() {
+            document.getElementById('contact-form').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        
+        function scrollToInfo() {
+            document.getElementById('contact-info').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections with fade animation
+        document.querySelectorAll('.section-fade').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Sending Message...
+            `;
+            submitBtn.disabled = true;
+            
+            // Get form data
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Show success state
+                submitBtn.innerHTML = `
+                    <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Message Sent!
+                `;
+                submitBtn.classList.add('success-animation');
+                
+                // Show success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 success-animation';
+                successMessage.innerHTML = `
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Thank you! We'll get back to you within 24 hours.</span>
+                    </div>
+                `;
+                document.body.appendChild(successMessage);
+                
+                // Reset form
+                e.target.reset();
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('success-animation');
+                    successMessage.remove();
+                }, 3000);
+                
+            }, 2000);
+        });
+        
+        // Add ripple effect to buttons
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('button') && !e.target.disabled) {
+                const button = e.target;
+                const ripple = document.createElement('span');
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    background: rgba(255, 255, 255, 0.3);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 0.6s ease-out;
+                    pointer-events: none;
+                `;
+                
+                button.style.position = 'relative';
+                button.style.overflow = 'hidden';
+                button.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            }
+        });
+        
+        // Add CSS for ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Trigger initial fade-in for hero section
+            setTimeout(() => {
+                document.querySelector('.section-fade').classList.add('visible');
+            }, 100);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f6504f5274edbd',t:'MTc1NTIzNTk3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

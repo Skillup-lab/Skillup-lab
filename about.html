@@ -1,350 +1,749 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teach on Skill Up</title>
-  <link rel="stylesheet" href="anim.css" />
-  <link rel="icon" type="image/png" href="images/ChatGPT Image May 5, 2025, 12_54_09 AM.png">
-  <!-- Add this inside <head> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Acadence</title>
+       <meta name="description" content="Acadence is a global EdTech platform connecting learners, educators, and skilled individuals. Gain job-ready skills, teach with powerful tools, and share knowledge without borders.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/webp" href="images/logo.webp">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .hero {
-      background-color: #a3fff4;
-      text-align: center;
-      padding: 4rem 1rem;
-      height: auto;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    .hero strong {
-      display: block;
-      font-weight: bolder;
-      font-size: 1.8;
-    }
-
-    .cta-btn {
-      background-color: black;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .features {
-      padding: 3rem 1rem;
-      background-color: #f4f4f4;
-      text-align: center;
-    }
-
-    .features h2 {
-      margin-bottom: 2rem;
-      font-size: 1.8rem;
-    }
-
-    .feature-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .feature-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      width: 280px;
-    }
-
-    .feature-card h3 {
-      margin-bottom: 0.5rem;
-      color: #222;
-    }
-
-    .cta-section {
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    .cta-section a {
-      margin: 0.5rem;
-      display: inline-block;
-    }
-
-    /* Footer */
-    .footer {
-      background: #a3fff4;
-      color: black;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    .footer-links {
-      margin-bottom: 1rem;
-    }
-
-    .footer-links a {
-      color: black;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-
-    @media screen and (max-width: 600px) {
-      .footer-links a {
-        display: inline-block;
-      }
-
-      .feature-cards {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    .head {
-      text-align: center;
-      margin-bottom: 25px;
-      background-color: #a3fff4;
-      width: auto;
-      border-radius: 10px;
-      padding: 10px;
-      margin-bottom: 0rem;
-    }
-
-    .logo {
-      color: white;
-      font-size: 1.6rem;
-      font-weight: bold;
-      height: 6vh;
-    }
-
-    span {
-      color: black;
-      font-size: 20px;
-      font-weight: bolder;
-      word-spacing: 10px;
-      padding-bottom: 10px;
-    }
-
-    a {
-      text-decoration: none;
-      color: black;
-    }
-
-    .feature-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 1.5rem;
-      margin: 2rem 1rem;
-    }
-
-    .feature-card {
-      flex: 1 1 200px;
-      max-width: 250px;
-      text-align: center;
-      padding: 1rem;
-      background-color: #f5fefe;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .feature-icon {
-      font-size: 2.5rem;
-      color: #00b894;
-      margin-bottom: 1rem;
-    }
-  </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                       navy: 'navy',
+                        purple: '#6C2DC7',
+                         purpl: 'purple',
+                        accent: 'white',
+                        nav:'gainsboro'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .theme-transition {
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+        }
+        
+        .dark .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #8b5cf6 100%);
+        }
+        
+        .floating-shape {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-shape:nth-child(2) {
+            animation-delay: -2s;
+        }
+        
+        .floating-shape:nth-child(3) {
+            animation-delay: -4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(120deg); }
+            66% { transform: translateY(10px) rotate(240deg); }
+        }
+        
+        .theme-toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: #e5e7eb;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle.dark {
+            background: #374151;
+        }
+        
+        .theme-toggle::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-toggle.dark::before {
+            transform: translateX(30px);
+            background: #1f2937;
+        }
+        
+        .section-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .team-card {
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .value-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .value-card:hover {
+            border-color: #7c3aed;
+            transform: translateY(-4px);
+        }
+        
+        .timeline-item {
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 60px;
+            bottom: -20px;
+            width: 2px;
+            background: linear-gradient(to bottom, #7c3aed, #1e3a8a);
+        }
+        
+        .timeline-item:last-child::before {
+            display: none;
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .founder-quote {
+            position: relative;
+        }
+        
+        .founder-quote::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            font-size: 4rem;
+            color: #7c3aed;
+            opacity: 0.3;
+            font-family: serif;
+        }
+        
+        .founder-quote::after {
+            content: '"';
+            position: absolute;
+            bottom: -40px;
+            right: -10px;
+            font-size: 4rem;
+            color: #7c3aed;
+            opacity: 0.3;
+            font-family: serif;
+        }
+         .logo {
+            height: 30%;
+            width: 100px;
+            margin-top: 20px;
+        }
+        .nav a{
+            margin-top: 27px;
+            font-size: 17px;
+        }
+        .nav button{
+               margin-top: 27px;
+            font-size: 14px;
+        }
+        nav{
+            height: 15%;
+        }
+        @media (max-width: 768px){
+nav{
+    height: 15%;
+}
+#mobile-menu-btn{
+    margin-top: 22px;
+         }
+         #mobile-menu a{
+font-size: 1.6rem;
+         }
+                  #mobile-menu button{
+font-size: 1.3rem;
+         }
+         .logo{
+            margin-left: 20px;
+         }
+        }
+    </style>
 </head>
+<body class="bg-accent text-navy">
+<!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-accent"><img class="logo" src="images/logo.webp" alt=""></h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 nav">
+                    <div class="flex items-baseline space-x-4">
+                        <a href="index.html" class="text-navy hover:text-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="student.html" class="text-navy hover:text-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">Learners</a>
+                        <a href="teacher.html" class="text-navy hover:text-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">Tutor</a>
+                        <a href="partner.html" class="text-navy hover:text-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">NGO Hub</a>
+                           <a href="contact.html" class="text-navy hover:text-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                    <div class="flex items-center space-x-3 ml-6">
+                        <button class="text-navy hover:text-purple px-4 py-2 rounded-md text-sm font-medium transition-colors border border-navy/30"><a href="login.html">Log in</a></button>
+                        <button class="bg-purple hover:bg-purple/90 text-accent px-4 py-2 rounded-md text-sm font-medium transition-colors"><a href="signup.html">Sign Up</a></button>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-navy hover:text-navy relative z-50">
+                        <svg id="hamburger-icon" class="h-8 w-8 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" class="h-8 w-8 hidden transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu overlay -->
+        <div id="mobile-menu" class="md:hidden fixed inset-0 bg-accent/95 backdrop-blur-sm transform translate-x-full transition-transform duration-300 ease-in-out z-40">
+            <div class="flex flex-col justify-center items-center h-full space-y-8">
+                <a href="index.html" class="text-navy hover:text-purple text-2xl font-medium transition-colors mobile-nav-link">Home</a>
+                <a href="student.html" class="text-navy hover:text-purple text-2xl font-medium transition-colors mobile-nav-link">Learners</a>
+                <a href="teacher.html" class="text-navy hover:text-purple text-2xl font-medium transition-colors mobile-nav-link">Tutors</a>
+                <a href="partner.html" class="text-navy hover:text-purple text-2xl font-medium transition-colors mobile-nav-link">NGO Hub</a>
+  <a href="contact.html" class="text-navy hover:text-purple text-2xl font-medium transition-colors mobile-nav-link">Contact</a>
+                <div class="flex flex-col space-y-4 mt-8 mobilelog" style="display: inline;font-size: 30px;">
+                    <button class="text-navy hover:text-navy px-6 py-3 rounded-md text-xl font-medium transition-colors border border-purple"><a href="login.html">Log in</a></button>
+                    <button class="bg-navy hover:bg-navy/90 text-accent px-6 py-3 rounded-md text-lg font-medium transition-colors"><a href="signup.html">Sign Up</a></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="bg-navy py-20 text-white relative overflow-hidden min-h-screen flex items-center pt-16" id="hero">
+        <!-- Floating Shapes -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full"></div>
+            <div class="floating-shape absolute top-40 right-20 w-16 h-16 bg-white/10 rounded-lg"></div>
+            <div class="floating-shape absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="section-fade max-w-4xl mx-auto">
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    About
+                    <span class="block text-purple-light">Acadence</span>
+                </h1>
+                
+                <p class="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+                    Empowering learners worldwide through innovative education technology, expert tutoring, and community-driven learning experiences that transform lives and build futures.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <button onclick="scrollToFounder()" class="bg-white text-navy px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
+                        Meet Our Team
+                    </button>
+                    <button onclick="scrollToMission()" class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-colors">
+                        Our Mission
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="py-16 theme-transition bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="section-fade">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="stat-card text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-navy to-purple rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-2">50K+</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Active Learners</p>
+                    </div>
+                    
+                    <div class="stat-card text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-navy to-purple rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-2">10K+</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Courses Available</p>
+                    </div>
+                    
+                    <div class="stat-card text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-navy to-purple rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-2">2K+</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Expert Tutors</p>
+                    </div>
+                    
+                    <div class="stat-card text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-navy to-purple rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-2">45+</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Countries Served</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Founder Section -->
+    <section id="founder" class="py-16 theme-transition bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="section-fade max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Meet Our Team</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                        The visionary behind Acadence's mission to democratize quality education
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Founder Image & Info -->
+                    <div class="text-center lg:text-left">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mission & Vision -->
+    <section id="mission" class="py-16 theme-transition bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="section-fade max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Mission & Vision</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                        Driving the future of education through innovation, accessibility, and excellence
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Mission -->
+                    <div class="theme-transition bg-gradient-to-br from-navy/5 to-purple/5 dark:from-navy/10 dark:to-purple/10 rounded-2xl p-8">
+                        <div class="w-16 h-16 bg-gradient-to-r from-navy to-purple rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Our Mission</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            To democratize access to quality education by providing innovative learning platforms, expert tutoring services, and community-driven educational experiences that empower learners worldwide to achieve their full potential.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-purple rounded-full"></div>
+                                <span class="text-gray-700 dark:text-gray-300">Make quality education accessible to all</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-purple rounded-full"></div>
+                                <span class="text-gray-700 dark:text-gray-300">Connect learners with expert tutors globally</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-purple rounded-full"></div>
+                                <span class="text-gray-700 dark:text-gray-300">Foster inclusive learning communities</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Vision -->
+                    <div class="theme-transition bg-gradient-to-br from-purple/5 to-navy/5 dark:from-purple/10 dark:to-navy/10 rounded-2xl p-8">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple to-navy rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Our Vision</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            To become the world's leading educational ecosystem where every learner, regardless of their background or location, has access to personalized, high-quality education that transforms lives and builds a better future for all.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                <span class="text-gray-700 dark:text-gray-300">Global educational transformation</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                <span class="text-gray-700 dark:text-gray-300">Personalized learning for everyone</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                <span class="text-gray-700 dark:text-gray-300">Building tomorrow's leaders today</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Core Values -->
+    <section id="values" class="py-16 theme-transition bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="section-fade">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Core Values</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                        The principles that guide everything we do at Acadence
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Excellence -->
+                    <div class="value-card theme-transition bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                        <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center">Excellence</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
+                            We strive for excellence in everything we do, from course content to user experience, ensuring the highest quality education for our learners.
+                        </p>
+                    </div>
+                    
+                    <!-- Accessibility -->
+                    <div class="value-card theme-transition bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center">Accessibility</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
+                            Education should be accessible to everyone. We break down barriers and make learning available to all, regardless of location or background.
+                        </p>
+                    </div>
+                    
+                    <!-- Innovation -->
+                    <div class="value-card theme-transition bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                        <div class="w-16 h-16 bg-gradient-to-r from-teal-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center">Innovation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
+                            We embrace cutting-edge technology and innovative teaching methods to create engaging and effective learning experiences.
+                        </p>
+                    </div>
+                    
+                    <!-- Community -->
+                    <div class="value-card theme-transition bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                        <div class="w-16 h-16 bg-gradient-to-r from-red-400 to-yellow-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center">Community</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
+                            We foster a supportive learning community where students, tutors, and educators collaborate and grow together.
+                        </p>
+                    </div>
+                    
+                    <!-- Integrity -->
+                    <div class="value-card theme-transition bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                        <div class="w-16 h-16 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center">Integrity</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
+                            We operate with transparency, honesty, and ethical practices in all our interactions with learners, tutors, and partners.
+                        </p>
+                    </div>
+                    
+                    <!-- Empowerment -->
+                    <div class="value-card theme-transition bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                        <div class="w-16 h-16 bg-gradient-to-r from-teal-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center">Empowerment</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
+                            We empower learners to take control of their education journey and achieve their personal and professional goals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section id="cta" class="gradient-bg py-16 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="section-fade max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Join Our Mission</h2>
+                <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                    Be part of the educational revolution. Whether you're a learner, tutor, or partner, there's a place for you in the Acadence community.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <button class="bg-white text-navy px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
+                        Start Learning Today
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-colors">
+                        Become a Tutor
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+  <!-- Footer -->
+    <footer class="bg-white text-navy py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                       
+                        <div>
+                    <h3 class="text-2xl font-bold text-navy mb-4">Acadence</h3>
+                    <p class="text-navy">  Partnering with organizations worldwide to make quality education accessible to every child in Africa. Together, we're building a brighter future.</p>
+                        </div>
+                    </div>
 
-<body>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-navy/10 rounded-lg flex items-center justify-center hover:bg-gray transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-navy/10 rounded-lg flex items-center justify-center hover:bg-gray transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-navy/10 rounded-lg flex items-center justify-center hover:bg-gray transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-navy/10 rounded-lg flex items-center justify-center hover:bg-gray transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Partnership -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+  <li><a href="index.html" class="hover:text-navy transition-colors">Home</a></li>
+                                 <li><a href="about.html" class="hover:text-navy transition-colors">About</a></li>
+                         <li><a href="student.html" class="hover:text-navy transition-colors">Learners</a></li>
+                         <li><a href="teacher.html" class="hover:text-navy transition-colors">Tutor</a></li>
+                        <li><a href="partner.html" class="hover:text-navy transition-colors">Institution Hub</a></li>
+                        <li><a href="contact.html" class="hover:text-navy transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Jump to</h4>
+                    <ul class="space-y-2">
+                           <li><a href="#hero" class="hover:text-purple transition-colors">Home</a></li>
+                        <li><a href="#founder" class="hover:text-purple transition-colors">Meet The Team</a></li>
+                        <li><a href="#mission" class="hover:text-purple transition-colors">Mission & Vision</a></li>
+                        <li><a href="#values" class="hover:text-purple transition-colors"></a>Values</li>
+                         <li><a href="#cta" class="hover:text-purple transition-colors"></a>Links</li>                         
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-8 pt-8 text-center">
+                <p class="text-navy-200">© 2025 Acadence. All rights reserved. | Empowering Education Across Africa</p>
+            </div>
+        </div>
+    </footer>
+  
+    <script>
+                 // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        let isMenuOpen = false;
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                hamburgerIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
 
-  <!-- HEADER -->
-  <header class="head">
-    <div class="logos">
-      <img src="images/bglogo.png" alt="Skill Up Logo" class="logo">
-    </div>
-    <span>
-      <a href="learner.html">Learn</a>
-      <a href="teacher.html">Teach</a>
-      <a href="index.html">Grow</a>
-    </span>
-  </header>
+        // Close mobile menu when clicking on nav links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+        });
 
-  <!-- WELCOME NOTE FROM THE SKILL UP TEAM -->
-  <section class="section hero" style="padding: 60px 20px; text-align: center; background-color: #a3fff4;">
-    <h2 style="font-size: 2em; margin-bottom: 20px;">A Welcome Note From the Skill Up Team</h2>
-    <p style="max-width: 800px; margin: 0 auto; font-size: 1.1em; line-height: 1.7;">
-      Welcome to Skill Up — a grassroots learning platform proudly built in Nigeria, for Nigerians, by Nigerians. We're a passionate
-      team of everyday problem-solvers who saw one simple truth: there are people around us with valuable skills, and
-      others eager to learn — but no bridge connecting them.
-    </p>
-    <p style="max-width: 800px; margin: 20px auto 0; font-size: 1.2em; color: #444;">
-      This MVP is just the beginning. Our goal is to help you teach what you know, build a trusted brand as a local
-      tutor, and empower others in your community. Whether you’re a teacher or learner, this is your space to grow.
-      Thank you for being part of the Skill Up story.
-    </p>
-  </section>
-
-
-  <!-- SECTION 1: Why Teach With Skill Up -->
-<section class="features reveal slide-up">
-  <h2>Why Skill Up is Different</h2>
-  <div class="feature-cards">
-
-    <div class="feature-card">
-      <i class="fas fa-users" style="font-size: 40px; color: #00b894;"></i>
-      <h4>Real People. Real Learning.</h4>
-      <p>Forget pre-recorded videos — Skill Up connects learners with real humans: peers, mentors, and local guides who teach live and respond in real-time.</p>
-    </div>
-
-    <div class="feature-card">
-      <i class="fas fa-laptop-code" style="font-size: 40px; color: #00b894;"></i>
-      <h4>Flexible & Personalized</h4>
-      <p>Classes happen online or in-person, and adapt to your pace, style, and schedule — so learning feels relevant and achievable.</p>
-    </div>
-
-    <div class="feature-card">
-      <i class="fas fa-chalkboard-teacher" style="font-size: 40px; color: #00b894;"></i>
-      <h4>Teach What You Know</h4>
-      <p>No degree needed. If you have a skill — from baking to braiding to building websites — you can teach, earn, and impact lives in your community.</p>
-    </div>
-
-    <div class="feature-card">
-      <i class="fas fa-handshake" style="font-size: 40px; color: #00b894;"></i>
-      <h4>Powered by Community</h4>
-      <p>Skill Up thrives on trust and local connection — learners share reviews, tutors get referrals, and everyone grows together.</p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- SECTION 1: Why Teach With Skill Up -->
-<section class="features reveal slide-up">
-  <h2>Why Teach With Skill Up?</h2>
-  <div class="feature-cards">
-
-    <div class="feature-card">
-      <i class="fas fa-user-graduate feature-icon"></i>
-      <h3>We Bring Learners to You</h3>
-      <p>No stress of marketing yourself — we connect you with students nearby who want to learn your skill right now.</p>
-    </div>
-
-    <div class="feature-card">
-      <i class="fas fa-calendar-alt feature-icon"></i>
-      <h3>You Set the Time & Price</h3>
-      <p>Decide how much you charge and when you teach. Whether it's evenings or weekends — you're in control.</p>
-    </div>
-
-    <div class="feature-card">
-      <i class="fas fa-chalkboard-teacher feature-icon"></i>
-      <h3>Easy Lesson Tools</h3>
-      <p>Manage bookings, communicate on WhatsApp, and keep things organized — all with beginner-friendly tools.</p>
-    </div>
-
-    <div class="feature-card">
-      <i class="fas fa-chart-line feature-icon"></i>
-      <h3>Grow Your Local Reputation</h3>
-      <p>Earn trust, get reviewed, and build your name as a go-to tutor in your area — even without a formal school.</p>
-    </div>
-
-  </div>
-</section>
-
-
-
-<!-- SECTION 2: Why Learn With Skill Up -->
-<section class="features reveal slide-up" style="background-color: #f9f9f9; padding: 40px 20px;">
-  <h2>Why Learn With Skill Up?</h2>
-  <div class="feature-cards">
-
-    <div class="feature-card">
-      <i class="fas fa-map-marker-alt feature-icon"></i>
-      <h3>Find Help Close to You</h3>
-      <p>From your street to your state, Skill Up connects you with nearby tutors who understand your environment and are ready to teach.</p>
-    </div>
-
-    <div class="feature-card">
-      <i class="fas fa-wallet feature-icon"></i>
-      <h3>Affordable, Flexible Pricing</h3>
-      <p>Many of our tutors price their sessions with you in mind. Whether you're a student or job-seeker, there's room for your budget.</p>
-    </div>
-
-    <div class="feature-card">
-      <i class="fas fa-user-friends feature-icon"></i>
-      <h3>Learn From People Like You</h3>
-      <p>Whether it’s a fellow student, a graduate, or an artisan — you're learning from someone who gets your reality and can break things down for you.</p>
-    </div>
-
-    <div class="feature-card">
-      <i class="fas fa-bolt feature-icon"></i>
-      <h3>Learn What Matters Today</h3>
-      <p>No maths or boring theory here. We focus on practical skills — like tech, crafts, and useful everyday skills — and you get a certificate when you pass your exam.</p>
-    </div>
-
-  </div>
-</section>
-
-
-
-<!-- SECTION 3: Founder's Note -->
-<section class="features reveal slide-up" style="padding: 50px 20px; background-color:white; color: black; text-align: center;">
-  <div style="border-left: 10px solid black;border-right: 10px solid black;">
-  <h2>A Note From the Founder</h2>
-  <div style="max-width: 800px; margin: 0 auto; font-size: 1.1em; line-height: 1.8;">
-    <p>
-      I started Skill Up because I saw something powerful: a mother in her kitchen who knows how to bake the best cakes — but doesn’t know where to start teaching others. A student who’s great at math but can’t afford a tutor. A graduate who’s gifted with digital skills, sitting at home with no job — yet plenty of people around them need that knowledge.
-    </p>
-    <p>
-      Skill Up is not just a platform. It’s a movement. We believe anyone can teach. Anyone can learn. You don’t need a fancy classroom — you need a connection. Skill Up connects you to real people in your community, people with knowledge and passion, willing to help you rise.
-    </p>
-    <p>
-      Whether you're teaching or learning, Skill Up is your place to grow, share, and shine. Welcome to a future where skills are passed from hand to hand, neighbor to neighbor, and heart to heart.
-    </p>
-    <p style="font-style: italic; margin-top: 20px;">— The Founder, Skill Up</p>
-  </div>
-  </div>
-</section>
-
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="skills.html">Add a Skill</a>
-      <a href="learn.html">Learn a Skill</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <p style="font-size: 1rem;">
-      You’re viewing the <strong>Skill Up MVP (Minimum Viable Product)</strong>. We’re testing, improving, and
-      building the full platform — and your feedback will shape the future of Skill Up.
-    </p>
-    <p>
-      Got ideas or issues?<a href="contact.html" style="color: #111;">Tell us.</a> Your voice matters.
-    </p>
-    <p>&copy; 2025 Skill Up. All rights reserved.</p>
-  </footer>
-
-</body>
-
+        
+        // Smooth scrolling functions
+        function scrollToFounder() {
+            document.getElementById('founder').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        
+        function scrollToMission() {
+            document.getElementById('mission').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections with fade animation
+        document.querySelectorAll('.section-fade').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Add ripple effect to buttons
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('button')) {
+                const button = e.target;
+                const ripple = document.createElement('span');
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    background: rgba(255, 255, 255, 0.3);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 0.6s ease-out;
+                    pointer-events: none;
+                `;
+                
+                button.style.position = 'relative';
+                button.style.overflow = 'hidden';
+                button.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            }
+        });
+        
+        // Add CSS for ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Trigger initial fade-in for hero section
+            setTimeout(() => {
+                document.querySelector('.section-fade').classList.add('visible');
+            }, 100);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f658db6630edbd',t:'MTc1NTIzNjMyMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

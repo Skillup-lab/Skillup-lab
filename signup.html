@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acadence - Vibe Check ✨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-blue': '#00f5ff',
+                        'neon-pink': '#ff006e',
+                        'electric-purple': '#8338ec',
+                        'lime-green': '#3a86ff',
+                        'dark-bg': '#0a0a0a',
+                        'card-dark': '#1a1a1a',
+                        'text-glow': '#ffffff'
+                    },
+                    fontFamily: {
+                        'cyber': ['JetBrains Mono', 'Courier New', 'monospace'],
+                        'modern': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'neon-pulse': 'neonPulse 2s ease-in-out infinite alternate',
+                        'cyber-glitch': 'cyberGlitch 0.3s ease-in-out',
+                        'float-up': 'floatUp 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+                        'slide-cyber': 'slideCyber 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                        'glow-rotate': 'glowRotate 4s linear infinite',
+                        'matrix-rain': 'matrixRain 20s linear infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #0f0f23 50%, #1a1a1a 75%, #0a0a0a 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            overflow-x: hidden;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .cyber-grid {
+            background-image: 
+                linear-gradient(rgba(0, 245, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 245, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .neon-card {
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .neon-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #00f5ff, #ff006e, #8338ec, #3a86ff, #00f5ff);
+            background-size: 400% 400%;
+            animation: neonBorder 4s ease infinite;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+        }
+        
+        @keyframes neonBorder {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .cyber-input {
+            background: rgba(10, 10, 10, 0.8);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            color: #ffffff;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+        }
+        
+        .cyber-input:focus {
+            border-color: #00f5ff;
+            box-shadow: 
+                0 0 20px rgba(0, 245, 255, 0.4),
+                inset 0 0 20px rgba(0, 245, 255, 0.1);
+            background: rgba(0, 245, 255, 0.05);
+            transform: translateY(-2px);
+        }
+        
+        .cyber-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .neon-button {
+            background: linear-gradient(135deg, #00f5ff 0%, #8338ec 50%, #ff006e 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease infinite;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .neon-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .neon-button:hover::before {
+            left: 100%;
+        }
+        
+        .neon-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 10px 30px rgba(0, 245, 255, 0.4),
+                0 0 50px rgba(255, 0, 110, 0.3);
+        }
+        
+        .cyber-tab {
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .cyber-tab::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00f5ff, #ff006e);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateX(-50%);
+        }
+        
+        .cyber-tab.active::after {
+            width: 100%;
+        }
+        
+        .cyber-tab.active {
+            color: #00f5ff;
+            text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+        }
+        
+        .glitch-text {
+            position: relative;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .glitch-text::before {
+            animation: glitch1 0.5s infinite;
+            color: #ff006e;
+            z-index: -1;
+        }
+        
+        .glitch-text::after {
+            animation: glitch2 0.5s infinite;
+            color: #00f5ff;
+            z-index: -2;
+        }
+        
+        @keyframes glitch1 {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+        
+        @keyframes glitch2 {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(2px, -2px); }
+            40% { transform: translate(2px, 2px); }
+            60% { transform: translate(-2px, -2px); }
+            80% { transform: translate(-2px, 2px); }
+        }
+        
+        .hologram-effect {
+            background: linear-gradient(45deg, transparent 30%, rgba(0, 245, 255, 0.1) 50%, transparent 70%);
+            background-size: 200% 200%;
+            animation: hologramScan 3s ease-in-out infinite;
+        }
+        
+        @keyframes hologramScan {
+            0%, 100% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+        }
+        
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .matrix-char {
+            position: absolute;
+            color: #00f5ff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            animation: matrixFall 10s linear infinite;
+        }
+        
+        @keyframes matrixFall {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+        
+        .cyber-checkbox {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00f5ff;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cyber-checkbox:checked {
+            background: linear-gradient(135deg, #00f5ff, #8338ec);
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+        }
+        
+        .cyber-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .cyber-select {
+            background: rgba(10, 10, 10, 0.8);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            color: #ffffff;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2300f5ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 12px center;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .cyber-select:focus {
+            border-color: #00f5ff;
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+            background-color: rgba(0, 245, 255, 0.05);
+        }
+        
+        .social-cyber {
+            background: rgba(26, 26, 26, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-cyber::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .social-cyber:hover::before {
+            left: 100%;
+        }
+        
+        .social-cyber:hover {
+            border-color: #00f5ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.2);
+        }
+        
+        .strength-bar {
+            height: 4px;
+            border-radius: 2px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .strength-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: strengthScan 2s ease-in-out infinite;
+        }
+        
+        @keyframes strengthScan {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+        
+        .form-slide {
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .slide-left {
+            transform: translateX(-100%) scale(0.95);
+            opacity: 0;
+        }
+        
+        .slide-right {
+            transform: translateX(100%) scale(0.95);
+            opacity: 0;
+        }
+        
+        .slide-center {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+        }
+        
+        @keyframes neonPulse {
+            from { box-shadow: 0 0 20px rgba(0, 245, 255, 0.4); }
+            to { box-shadow: 0 0 40px rgba(0, 245, 255, 0.8); }
+        }
+        
+        @keyframes floatUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .cyber-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .cyber-input:focus + .cyber-icon {
+            color: #00f5ff;
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 8px rgba(0, 245, 255, 0.6));
+        }
+        
+        .loading-dots::after {
+            content: '';
+            animation: loadingDots 1.5s infinite;
+        }
+        
+        @keyframes loadingDots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+        
+        .cyber-modal {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border: 2px solid #00f5ff;
+            box-shadow: 
+                0 0 50px rgba(0, 245, 255, 0.3),
+                inset 0 0 50px rgba(0, 245, 255, 0.1);
+        }
+        
+        .success-glow {
+            animation: successPulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes successPulse {
+            from { box-shadow: 0 0 30px rgba(58, 134, 255, 0.5); }
+            to { box-shadow: 0 0 60px rgba(58, 134, 255, 0.8); }
+        }
+    </style>
+</head>
+<body class="font-modern text-white min-h-screen cyber-grid">
+    
+    <!-- Matrix Background -->
+    <div class="matrix-bg" id="matrixBg"></div>
+    
+    <!-- Navigation -->
+    <nav class="relative z-50 p-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-cyber-blue to-electric-purple rounded-xl flex items-center justify-center animate-neon-pulse">
+                    <i class="fas fa-graduation-cap text-white text-xl"></i>
+                </div>
+                <h1 class="text-2xl font-cyber font-bold cursor-pointer glitch-text" data-text="ACADENCE" onclick="goHome()">
+                    ACADENCE
+                </h1>
+            </div>
+            <button onclick="goHome()" class="text-cyan-400 hover:text-cyber-blue font-medium transition-all duration-300 hover:transform hover:scale-105 font-cyber">
+                <i class="fas fa-arrow-left mr-2"></i>
+                &lt; BACK
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="min-h-screen flex items-center justify-center px-4 py-12">
+        <div class="w-full max-w-md">
+            
+            <!-- Header -->
+            <div class="text-center mb-12 animate-float-up">
+                <div class="mb-8 relative">
+                    <div class="w-24 h-24 bg-gradient-to-br from-cyber-blue via-electric-purple to-neon-pink rounded-2xl flex items-center justify-center mx-auto animate-neon-pulse hologram-effect">
+                        <i class="fas fa-rocket text-white text-4xl"></i>
+                    </div>
+                    <div class="absolute -inset-4 bg-gradient-to-r from-cyber-blue via-neon-pink to-electric-purple rounded-full opacity-20 blur-xl animate-pulse"></div>
+                </div>
+                <h2 class="text-5xl font-cyber font-bold mb-4 glitch-text" data-text="ENTER THE MATRIX">
+                    ENTER THE MATRIX
+                </h2>
+                <p class="text-cyan-300 text-lg font-medium">// Your digital transformation starts here</p>
+            </div>
+
+            <!-- Auth Card -->
+            <div class="neon-card rounded-3xl p-8 animate-float-up">
+                
+                <!-- Tab Switcher -->
+                <div class="flex mb-10 bg-card-dark rounded-2xl p-2 border border-cyan-800">
+                    <button 
+                        id="loginTab" 
+                        class="cyber-tab flex-1 py-4 px-6 text-center font-bold rounded-xl transition-all duration-300 active font-cyber"
+                        onclick="switchTab('login')"
+                    >
+                        &gt; LOGIN
+                    </button>
+                    <button 
+                        id="signupTab" 
+                        class="cyber-tab flex-1 py-4 px-6 text-center font-bold rounded-xl transition-all duration-300 text-gray-400 font-cyber"
+                        onclick="switchTab('signup')"
+                    >
+                        &gt; REGISTER
+                    </button>
+                </div>
+
+                <!-- Forms Container -->
+                <div class="relative overflow-hidden">
+                    
+                    <!-- Login Form -->
+                    <div id="loginForm" class="form-slide slide-center">
+                        <form class="space-y-8" onsubmit="handleLogin(event)">
+                            
+                            <!-- Email -->
+                            <div class="relative">
+                                <label for="loginEmail" class="block text-sm font-bold text-cyan-300 mb-3 font-cyber">
+                                    // EMAIL_ADDRESS
+                                </label>
+                                <div class="relative">
+                                    <input 
+                                        id="loginEmail" 
+                                        name="email" 
+                                        type="email" 
+                                        required 
+                                        class="cyber-input w-full px-6 py-4 pl-14 rounded-2xl focus:outline-none font-cyber"
+                                        placeholder="user@acadence.io"
+                                    >
+                                    <i class="fas fa-at cyber-icon absolute left-5 top-1/2 transform -translate-y-1/2 text-cyan-400"></i>
+                                </div>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="relative">
+                                <label for="loginPassword" class="block text-sm font-bold text-cyan-300 mb-3 font-cyber">
+                                    // PASSWORD
+                                </label>
+                                <div class="relative">
+                                    <input 
+                                        id="loginPassword" 
+                                        name="password" 
+                                        type="password" 
+                                        required 
+                                        class="cyber-input w-full px-6 py-4 pl-14 pr-14 rounded-2xl focus:outline-none font-cyber"
+                                        placeholder="••••••••••••"
+                                    >
+                                    <i class="fas fa-lock cyber-icon absolute left-5 top-1/2 transform -translate-y-1/2 text-cyan-400"></i>
+                                    <button 
+                                        type="button" 
+                                        class="absolute right-5 top-1/2 transform -translate-y-1/2 text-cyan-400 hover:text-cyber-blue transition-colors"
+                                        onclick="togglePassword('loginPassword')"
+                                    >
+                                        <i class="fas fa-eye" id="loginPasswordToggle"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Role -->
+                            <div class="relative">
+                                <label for="loginRole" class="block text-sm font-bold text-cyan-300 mb-3 font-cyber">
+                                    // USER_TYPE
+                                </label>
+                                <div class="relative">
+                                    <select 
+                                        id="loginRole" 
+                                        name="role" 
+                                        required 
+                                        class="cyber-select w-full px-6 py-4 pl-14 rounded-2xl focus:outline-none font-cyber"
+                                    >
+                                        <option value="">SELECT_ROLE</option>
+                                        <option value="student">STUDENT</option>
+                                        <option value="teacher">TEACHER</option>
+                                        <option value="ngo">NGO_REP</option>
+                                    </select>
+                                    <i class="fas fa-user-astronaut cyber-icon absolute left-5 top-1/2 transform -translate-y-1/2 text-cyan-400"></i>
+                                </div>
+                            </div>
+
+                            <!-- Remember & Forgot -->
+                            <div class="flex items-center justify-between">
+                                <label class="flex items-center">
+                                    <input 
+                                        type="checkbox" 
+                                        class="cyber-checkbox mr-3"
+                                    >
+                                    <span class="text-cyan-300 font-cyber text-sm">REMEMBER_ME</span>
+                                </label>
+                                <button 
+                                    type="button" 
+                                    class="text-cyber-blue hover:text-neon-pink font-cyber text-sm transition-colors"
+                                    onclick="showForgotPassword()"
+                                >
+                                    FORGOT_PASS?
+                                </button>
+                            </div>
+
+                            <!-- Login Button -->
+                            <button 
+                                type="submit" 
+                                class="w-full neon-button text-black py-4 rounded-2xl font-bold text-lg font-cyber"
+                            >
+                                &gt; INITIALIZE_SESSION
+                            </button>
+                        </form>
+
+                        <!-- Switch Message -->
+                        <div class="text-center mt-8">
+                            <p class="text-gray-400 font-cyber text-sm">
+                                NEW_USER? 
+                                <button 
+                                    class="text-cyber-blue hover:text-neon-pink font-bold transition-colors ml-1"
+                                    onclick="switchTab('signup')"
+                                >
+                                    CREATE_ACCOUNT
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sign Up Form -->
+                    <div id="signupForm" class="form-slide slide-right hidden">
+                        <form class="space-y-8" onsubmit="handleSignup(event)">
+                            
+                            <!-- Full Name -->
+                            <div class="relative">
+                                <label for="signupName" class="block text-sm font-bold text-cyan-300 mb-3 font-cyber">
+                                    // FULL_NAME
+                                </label>
+                                <div class="relative">
+                                    <input 
+                                        id="signupName" 
+                                        name="name" 
+                                        type="text" 
+                                        required 
+                                        class="cyber-input w-full px-6 py-4 pl-14 rounded-2xl focus:outline-none font-cyber"
+                                        placeholder="John Doe"
+                                    >
+                                    <i class="fas fa-user cyber-icon absolute left-5 top-1/2 transform -translate-y-1/2 text-cyan-400"></i>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="relative">
+                                <label for="signupEmail" class="block text-sm font-bold text-cyan-300 mb-3 font-cyber">
+                                    // EMAIL_ADDRESS
+                                </label>
+                                <div class="relative">
+                                    <input 
+                                        id="signupEmail" 
+                                        name="email" 
+                                        type="email" 
+                                        required 
+                                        class="cyber-input w-full px-6 py-4 pl-14 rounded-2xl focus:outline-none font-cyber"
+                                        placeholder="user@acadence.io"
+                                    >
+                                    <i class="fas fa-at cyber-icon absolute left-5 top-1/2 transform -translate-y-1/2 text-cyan-400"></i>
+                                </div>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="relative">
+                                <label for="signupPassword" class="block text-sm font-bold text-cyan-300 mb-3 font-cyber">
+                                    // CREATE_PASSWORD
+                                </label>
+                                <div class="relative">
+                                    <input 
+                                        id="signupPassword" 
+                                        name="password" 
+                                        type="password" 
+                                        required 
+                                        class="cyber-input w-full px-6 py-4 pl-14 pr-14 rounded-2xl focus:outline-none font-cyber"
+                                        placeholder="••••••••••••"
+                                        oninput="checkPasswordStrength(this.value)"
+                                    >
+                                    <i class="fas fa-shield-alt cyber-icon absolute left-5 top-1/2 transform -translate-y-1/2 text-cyan-400"></i>
+                                    <button 
+                                        type="button" 
+                                        class="absolute right-5 top-1/2 transform -translate-y-1/2 text-cyan-400 hover:text-cyber-blue transition-colors"
+                                        onclick="togglePassword('signupPassword')"
+                                    >
+                                        <i class="fas fa-eye" id="signupPasswordToggle"></i>
+                                    </button>
+                                </div>
+                                <!-- Password Strength -->
+                                <div class="mt-4">
+                                    <div class="flex space-x-2 mb-2">
+                                        <div class="strength-bar flex-1 bg-gray-700 rounded" id="strength1"></div>
+                                        <div class="strength-bar flex-1 bg-gray-700 rounded" id="strength2"></div>
+                                        <div class="strength-bar flex-1 bg-gray-700 rounded" id="strength3"></div>
+                                        <div class="strength-bar flex-1 bg-gray-700 rounded" id="strength4"></div>
+                                    </div>
+                                    <p class="text-sm text-cyan-300 font-cyber" id="passwordStrengthText">// SECURITY_LEVEL: UNKNOWN</p>
+                                </div>
+                            </div>
+
+                            <!-- Role -->
+                            <div class="relative">
+                                <label for="signupRole" class="block text-sm font-bold text-cyan-300 mb-3 font-cyber">
+                                    // USER_TYPE
+                                </label>
+                                <div class="relative">
+                                    <select 
+                                        id="signupRole" 
+                                        name="role" 
+                                        required 
+                                        class="cyber-select w-full px-6 py-4 pl-14 rounded-2xl focus:outline-none font-cyber"
+                                    >
+                                        <option value="">SELECT_ROLE</option>
+                                        <option value="student">STUDENT</option>
+                                        <option value="teacher">TEACHER</option>
+                                        <option value="ngo">NGO_REP</option>
+                                    </select>
+                                    <i class="fas fa-user-astronaut cyber-icon absolute left-5 top-1/2 transform -translate-y-1/2 text-cyan-400"></i>
+                                </div>
+                            </div>
+
+                            <!-- Terms -->
+                            <div class="flex items-start">
+                                <input 
+                                    type="checkbox" 
+                                    class="cyber-checkbox mr-4 mt-1"
+                                    required
+                                >
+                                <label class="text-cyan-300 font-cyber text-sm leading-relaxed">
+                                    I AGREE TO THE 
+                                    <a href="#" class="text-cyber-blue hover:text-neon-pink transition-colors">TERMS</a> 
+                                    AND 
+                                    <a href="#" class="text-cyber-blue hover:text-neon-pink transition-colors">PRIVACY_POLICY</a>
+                                </label>
+                            </div>
+
+                            <!-- Sign Up Button -->
+                            <button 
+                                type="submit" 
+                                class="w-full neon-button text-black py-4 rounded-2xl font-bold text-lg font-cyber"
+                            >
+                                &gt; CREATE_ACCOUNT
+                            </button>
+                        </form>
+
+                        <!-- Switch Message -->
+                        <div class="text-center mt-8">
+                            <p class="text-gray-400 font-cyber text-sm">
+                                EXISTING_USER? 
+                                <button 
+                                    class="text-cyber-blue hover:text-neon-pink font-bold transition-colors ml-1"
+                                    onclick="switchTab('login')"
+                                >
+                                    LOGIN_HERE
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Social Login -->
+                <div class="mt-10">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-cyan-800"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-6 bg-card-dark text-cyan-400 font-cyber">// OR_CONNECT_WITH</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <button class="social-cyber w-full py-4 px-6 rounded-2xl font-bold text-cyan-300 flex items-center justify-center space-x-3 font-cyber">
+                            <i class="fab fa-google text-xl text-red-400"></i>
+                            <span>GOOGLE</span>
+                        </button>
+                        <button class="social-cyber w-full py-4 px-6 rounded-2xl font-bold text-cyan-300 flex items-center justify-center space-x-3 font-cyber">
+                            <i class="fab fa-facebook text-xl text-blue-400"></i>
+                            <span>FACEBOOK</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+        <div class="cyber-modal rounded-3xl p-10 max-w-md mx-4 text-center animate-float-up">
+            <div class="w-20 h-20 bg-gradient-to-br from-lime-green to-cyber-blue rounded-full flex items-center justify-center mx-auto mb-6 success-glow">
+                <i class="fas fa-check text-white text-3xl"></i>
+            </div>
+            <h3 class="text-3xl font-cyber font-bold text-cyber-blue mb-4 glitch-text" data-text="ACCESS GRANTED" id="successTitle">ACCESS GRANTED</h3>
+            <p class="text-cyan-300 mb-8 leading-relaxed font-cyber text-sm" id="successMessage">// Welcome to the matrix, user</p>
+            <button 
+                class="neon-button text-black px-10 py-4 rounded-2xl font-bold text-lg font-cyber"
+                onclick="closeSuccessModal()"
+            >
+                &gt; ENTER_SYSTEM
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let currentTab = 'login';
+
+        // Create matrix rain effect
+        function createMatrixRain() {
+            const matrixBg = document.getElementById('matrixBg');
+            const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            
+            setInterval(() => {
+                const char = document.createElement('div');
+                char.className = 'matrix-char';
+                char.textContent = chars[Math.floor(Math.random() * chars.length)];
+                char.style.left = Math.random() * 100 + 'vw';
+                char.style.animationDuration = Math.random() * 3 + 2 + 's';
+                char.style.animationDelay = Math.random() * 2 + 's';
+                
+                matrixBg.appendChild(char);
+                
+                setTimeout(() => {
+                    char.remove();
+                }, 5000);
+            }, 200);
+        }
+
+        // Cyber tab switching
+        function switchTab(tab) {
+            if (currentTab === tab) return;
+
+            const loginTab = document.getElementById('loginTab');
+            const signupTab = document.getElementById('signupTab');
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+
+            // Update tab buttons
+            if (tab === 'login') {
+                loginTab.classList.add('active');
+                loginTab.classList.remove('text-gray-400');
+                signupTab.classList.remove('active');
+                signupTab.classList.add('text-gray-400');
+                
+                // Animate form transition
+                signupForm.classList.add('slide-right');
+                setTimeout(() => {
+                    signupForm.classList.add('hidden');
+                    signupForm.classList.remove('slide-right');
+                    loginForm.classList.remove('hidden');
+                    loginForm.classList.add('slide-center');
+                }, 300);
+                
+            } else {
+                signupTab.classList.add('active');
+                signupTab.classList.remove('text-gray-400');
+                loginTab.classList.remove('active');
+                loginTab.classList.add('text-gray-400');
+                
+                // Animate form transition
+                loginForm.classList.add('slide-left');
+                setTimeout(() => {
+                    loginForm.classList.add('hidden');
+                    loginForm.classList.remove('slide-left');
+                    signupForm.classList.remove('hidden');
+                    signupForm.classList.add('slide-center');
+                }, 300);
+            }
+
+            currentTab = tab;
+        }
+
+        // Cyber password toggle
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const toggle = document.getElementById(inputId + 'Toggle');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                toggle.className = 'fas fa-eye-slash';
+            } else {
+                input.type = 'password';
+                toggle.className = 'fas fa-eye';
+            }
+        }
+
+        // Cyber password strength
+        function checkPasswordStrength(password) {
+            const indicators = ['strength1', 'strength2', 'strength3', 'strength4'];
+            const strengthText = document.getElementById('passwordStrengthText');
+            
+            let strength = 0;
+            let feedback = '';
+            
+            if (password.length >= 8) strength++;
+            if (password.length >= 12) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+            
+            // Reset indicators
+            indicators.forEach(id => {
+                document.getElementById(id).className = 'strength-bar flex-1 bg-gray-700 rounded';
+            });
+            
+            // Update based on strength
+            if (strength <= 2) {
+                for (let i = 0; i < Math.min(strength, 1); i++) {
+                    document.getElementById(indicators[i]).style.background = 'linear-gradient(90deg, #ff006e, #ff4081)';
+                }
+                feedback = '// SECURITY_LEVEL: WEAK';
+            } else if (strength <= 3) {
+                for (let i = 0; i < 2; i++) {
+                    document.getElementById(indicators[i]).style.background = 'linear-gradient(90deg, #ff9800, #ffc107)';
+                }
+                feedback = '// SECURITY_LEVEL: FAIR';
+            } else if (strength <= 4) {
+                for (let i = 0; i < 3; i++) {
+                    document.getElementById(indicators[i]).style.background = 'linear-gradient(90deg, #00f5ff, #8338ec)';
+                }
+                feedback = '// SECURITY_LEVEL: GOOD';
+            } else {
+                for (let i = 0; i < 4; i++) {
+                    document.getElementById(indicators[i]).style.background = 'linear-gradient(90deg, #3a86ff, #06ffa5)';
+                }
+                feedback = '// SECURITY_LEVEL: MAXIMUM';
+            }
+            
+            strengthText.textContent = password.length > 0 ? feedback : '// SECURITY_LEVEL: UNKNOWN';
+        }
+
+        // Cyber form handlers
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const role = formData.get('role');
+            
+            const roleNames = {
+                'student': 'STUDENT',
+                'teacher': 'TEACHER',
+                'ngo': 'NGO_REPRESENTATIVE'
+            };
+            
+            showSuccessModal(
+                'ACCESS GRANTED',
+                `// Welcome back, ${roleNames[role]}! Your cyber dashboard is now loading with enhanced features and real-time data streams.`
+            );
+        }
+
+        function handleSignup(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const name = formData.get('name').split(' ')[0].toUpperCase();
+            const role = formData.get('role');
+            
+            const roleNames = {
+                'student': 'STUDENT',
+                'teacher': 'TEACHER',
+                'ngo': 'NGO_REPRESENTATIVE'
+            };
+            
+            showSuccessModal(
+                'ACCOUNT CREATED',
+                `// Welcome to the matrix, ${name}! Your ${roleNames[role]} profile has been initialized with quantum encryption and AI-powered features.`
+            );
+        }
+
+        function showForgotPassword() {
+            alert('🔐 CYBER RECOVERY PROTOCOL\n\n// Initiating secure password reset\n\n> Enter registered email\n> Receive encrypted recovery link\n> Create new quantum password\n> Access restored\n\n// Your data remains protected by military-grade encryption');
+        }
+
+        function goHome() {
+            alert('🏠 RETURNING TO ACADENCE HQ\n\n// Loading main interface...\n\n✨ AI-powered learning\n🚀 Quantum acceleration\n🔮 Future-ready skills\n🌐 Global cyber community\n🛡️ Military-grade security\n\n// Thank you for choosing Acadence!');
+        }
+
+        // Cyber success modal
+        function showSuccessModal(title, message) {
+            document.getElementById('successTitle').textContent = title;
+            document.getElementById('successTitle').setAttribute('data-text', title);
+            document.getElementById('successMessage').textContent = message;
+            document.getElementById('successModal').classList.remove('hidden');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+            
+            setTimeout(() => {
+                alert('🚀 LAUNCHING CYBER DASHBOARD...\n\n// Initializing quantum interface\n\n✨ AI-powered personalization\n📊 Real-time analytics\n🎯 Neural recommendations\n🏆 Achievement protocols\n👥 Cyber community access\n💼 Career acceleration\n🛡️ Quantum security\n\n// Welcome to the future!');
+            }, 500);
+        }
+
+        // Cyber social handlers
+        document.querySelectorAll('.social-cyber').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const provider = this.textContent.trim();
+                alert(`🔗 ${provider} CYBER LINK\n\n// Establishing secure connection\n\n⚡ Quantum authentication\n🛡️ Military encryption\n✅ Instant access\n🚀 Direct dashboard entry\n\n// Connecting to ${provider} servers...`);
+            });
+        });
+
+        // Initialize cyber effects
+        document.addEventListener('DOMContentLoaded', function() {
+            createMatrixRain();
+            
+            // Enhanced cyber focus effects
+            document.querySelectorAll('.cyber-input, .cyber-select').forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.style.transform = 'translateY(-2px) scale(1.01)';
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Auto-focus with cyber effect
+            setTimeout(() => {
+                const firstInput = document.querySelector('#loginForm input[type="email"]');
+                if (firstInput) {
+                    firstInput.focus();
+                    firstInput.style.borderColor = '#00f5ff';
+                }
+            }, 1000);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9773971ca3cebb51',t:'MTc1NjU0OTU5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -3,234 +3,573 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - SkillUp Lab</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images/ChatGPT Image May 5, 2025, 12_54_09 AM.png">
+    <title>Acadence - Authentication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+            background-attachment: fixed;
+        }
+        
         .auth-container {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #a3fff4 0%, #74b9ff 100%);
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 
+                0 32px 64px -12px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
         }
-
-        .auth-card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 400px;
+        
+        .form-input {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            color: #1e293b;
+            transition: all 0.3s ease;
         }
-
-        .auth-header {
-            text-align: center;
-            margin-bottom: 30px;
+        
+        .form-input:focus {
+            border-color: #0ea5e9;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+            background: #ffffff;
         }
-
-        .auth-header img {
-            height: 60px;
-            margin-bottom: 20px;
+        
+        .form-input::placeholder {
+            color: #94a3b8;
         }
-
-        .auth-header h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 2rem;
-        }
-
-        .auth-header p {
-            color: #666;
-            margin: 0;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 500;
-        }
-
-        .input-icon {
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            transition: all 0.3s ease;
             position: relative;
+            overflow: hidden;
         }
-
-        .input-icon i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #666;
-        }
-
-        .input-icon input {
-            width: 100%;
-            padding: 15px 15px 15px 45px;
-            border: 2px solid #e1e1e1;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-
-        .input-icon input:focus {
-            outline: none;
-            border-color: #74b9ff;
-        }
-
-        .auth-btn {
-            width: 100%;
-            padding: 15px;
-            background: #74b9ff;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-            margin-bottom: 20px;
-        }
-
-        .auth-btn:hover {
-            background: #0984e3;
-        }
-
-        .auth-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-
-        .auth-links {
-            text-align: center;
-        }
-
-        .auth-links a {
-            color: #74b9ff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .auth-links a:hover {
-            text-decoration: underline;
-        }
-
-        .divider {
-            text-align: center;
-            margin: 20px 0;
-            position: relative;
-        }
-
-        .divider::before {
+        
+        .btn-primary::before {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: #e1e1e1;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
         }
-
-        .divider span {
-            background: white;
-            padding: 0 15px;
-            color: #666;
+        
+        .btn-primary:hover::before {
+            left: 100%;
         }
-
-        .loading-spinner {
-            display: none;
-            text-align: center;
-            margin: 20px 0;
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);
         }
-
-        .spinner {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #74b9ff;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .back-home {
-            position: absolute;
-            top: 20px;
-            left: 20px;
+        
+        .tab-active {
+            background: #0ea5e9;
             color: white;
-            text-decoration: none;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            box-shadow: 0 4px 14px 0 rgba(14, 165, 233, 0.39);
         }
-
-        .back-home:hover {
-            text-decoration: underline;
+        
+        .tab-inactive {
+            background: #f1f5f9;
+            color: #64748b;
+        }
+        
+        .tab-inactive:hover {
+            background: #e2e8f0;
+            color: #475569;
+        }
+        
+        .social-btn {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .social-btn:hover {
+            border-color: #0ea5e9;
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+            transform: translateY(-1px);
+        }
+        
+        .custom-checkbox {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #cbd5e1;
+            border-radius: 4px;
+            background: #ffffff;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .custom-checkbox:checked {
+            background: #0ea5e9;
+            border-color: #0ea5e9;
+        }
+        
+        .custom-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .form-select {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            color: #1e293b;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 12px center;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-select:focus {
+            border-color: #0ea5e9;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+            background-color: #ffffff;
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.5s ease-out;
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.5s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
-<body>
-    <a href="index.html" class="back-home">
-        <i class="fas fa-arrow-left"></i>
-        Back to Home
-    </a>
-
-    <div class="auth-container">
-        <div class="auth-card">
-            <div class="auth-header">
-                <img src="images/bglogo.png" alt="SkillUp Logo">
-                <h1>Welcome Back</h1>
-                <p>Sign in to your SkillUp account</p>
-            </div>
-
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="username">Username or Email</label>
-                    <div class="input-icon">
-                        <i class="fas fa-user"></i>
-                        <input type="text" id="username" name="username" required>
+<body class="font-sans min-h-screen">
+    
+    <!-- Background Pattern -->
+    <div class="fixed inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, #0ea5e9 0%, transparent 50%), radial-gradient(circle at 75% 75%, #0284c7 0%, transparent 50%);"></div>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="relative min-h-screen flex">
+    
+    
+        <!-- Right Side - Auth Form -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-8">
+            <div class="w-full max-w-md">
+                
+                <!-- Mobile Header -->
+                <div class="lg:hidden text-center mb-8">
+                    <div class="w-16 h-16 bg-brand-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
                     </div>
+                    <h1 class="text-3xl font-bold text-white">Acadence</h1>
                 </div>
-
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <div class="input-icon">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="password" name="password" required>
+                
+                <!-- Auth Container -->
+                <div class="auth-container rounded-2xl p-8 fade-in">
+                    
+                    <!-- Tab Switcher -->
+                    <div class="flex bg-gray-100 rounded-xl p-1 mb-8">
+                        <button 
+                            id="loginTab" 
+                            class="flex-1 py-3 px-4 rounded-lg font-semibold transition-all duration-300 tab-active"
+                            onclick="switchTab('login')"
+                        >
+                            Sign In
+                        </button>
+                        <button 
+                            id="signupTab" 
+                            class="flex-1 py-3 px-4 rounded-lg font-semibold transition-all duration-300 tab-inactive"
+                            onclick="switchTab('signup')"
+                        >
+                            Sign Up
+                        </button>
                     </div>
+
+                    <!-- Forms Container -->
+                    <div class="relative">
+                        
+                        <!-- Login Form -->
+                        <div id="loginForm" class="slide-in-left">
+                            <form class="space-y-5" onsubmit="handleLogin(event)">
+                                
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                                    <input 
+                                        type="email" 
+                                        name="email"
+                                        required 
+                                        class="form-input w-full px-4 py-3 rounded-lg focus:outline-none"
+                                        placeholder="Enter your email"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+                                    <div class="relative">
+                                        <input 
+                                            id="loginPassword"
+                                            type="password" 
+                                            name="password"
+                                            required 
+                                            class="form-input w-full px-4 py-3 pr-12 rounded-lg focus:outline-none"
+                                            placeholder="Enter your password"
+                                        >
+                                        <button 
+                                            type="button" 
+                                            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                            onclick="togglePassword('loginPassword')"
+                                        >
+                                            <i class="fas fa-eye" id="loginPasswordToggle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Role</label>
+                                    <select 
+                                        name="role"
+                                        required 
+                                        class="form-select w-full px-4 py-3 rounded-lg focus:outline-none"
+                                    >
+                                        <option value="">Select your role</option>
+                                        <option value="student">Student</option>
+                                        <option value="teacher">Teacher</option>
+                                        <option value="ngo">NGO Representative</option>
+                                    </select>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="custom-checkbox mr-3">
+                                        <span class="text-sm text-gray-600">Remember me</span>
+                                    </label>
+                                    <button 
+                                        type="button" 
+                                        class="text-sm text-brand-600 hover:text-brand-700 font-semibold"
+                                        onclick="showForgotPassword()"
+                                    >
+                                        Forgot password?
+                                    </button>
+                                </div>
+
+                                <button 
+                                    type="submit" 
+                                    class="w-full btn-primary text-white py-3 rounded-lg font-semibold"
+                                >
+                                    Sign In
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Sign Up Form -->
+                        <div id="signupForm" class="hidden">
+                            <form class="space-y-5" onsubmit="handleSignup(event)">
+                                
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
+                                    <input 
+                                        type="text" 
+                                        name="name"
+                                        required 
+                                        class="form-input w-full px-4 py-3 rounded-lg focus:outline-none"
+                                        placeholder="Enter your full name"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                                    <input 
+                                        type="email" 
+                                        name="email"
+                                        required 
+                                        class="form-input w-full px-4 py-3 rounded-lg focus:outline-none"
+                                        placeholder="Enter your email"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+                                    <div class="relative">
+                                        <input 
+                                            id="signupPassword"
+                                            type="password" 
+                                            name="password"
+                                            required 
+                                            class="form-input w-full px-4 py-3 pr-12 rounded-lg focus:outline-none"
+                                            placeholder="Create a password"
+                                        >
+                                        <button 
+                                            type="button" 
+                                            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                            onclick="togglePassword('signupPassword')"
+                                        >
+                                            <i class="fas fa-eye" id="signupPasswordToggle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Role</label>
+                                    <select 
+                                        name="role"
+                                        required 
+                                        class="form-select w-full px-4 py-3 rounded-lg focus:outline-none"
+                                    >
+                                        <option value="">Select your role</option>
+                                        <option value="student">Student</option>
+                                        <option value="teacher">Teacher</option>
+                                        <option value="ngo">NGO Representative</option>
+                                    </select>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <input type="checkbox" class="custom-checkbox mr-3 mt-1" required>
+                                    <label class="text-sm text-gray-600 leading-relaxed">
+                                        I agree to the 
+                                        <a href="#" class="text-brand-600 hover:text-brand-700 font-semibold">Terms of Service</a> 
+                                        and 
+                                        <a href="#" class="text-brand-600 hover:text-brand-700 font-semibold">Privacy Policy</a>
+                                    </label>
+                                </div>
+
+                                <button 
+                                    type="submit" 
+                                    class="w-full btn-primary text-white py-3 rounded-lg font-semibold"
+                                >
+                                    Create Account
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <!-- Social Login -->
+                    <div class="mt-8">
+                        <div class="relative">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-gray-300"></div>
+                            </div>
+                            <div class="relative flex justify-center text-sm">
+                                <span class="px-4 bg-white text-gray-500">Or continue with</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 grid grid-cols-2 gap-3">
+                            <button class="social-btn w-full py-3 px-4 rounded-lg font-medium text-gray-700 flex items-center justify-center space-x-2">
+                                <i class="fab fa-google text-red-500"></i>
+                                <span>Google</span>
+                            </button>
+                            <button class="social-btn w-full py-3 px-4 rounded-lg font-medium text-gray-700 flex items-center justify-center space-x-2">
+                                <i class="fab fa-facebook text-blue-600"></i>
+                                <span>Facebook</span>
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
-
-                <button type="submit" class="auth-btn">Sign In</button>
-            </form>
-
-            <div class="loading-spinner">
-                <div class="spinner"></div>
-                <p>Signing you in...</p>
-            </div>
-
-            <div class="divider">
-                <span>Don't have an account?</span>
-            </div>
-
-            <div class="auth-links">
-                <a href="register.html">Create Account</a>
             </div>
         </div>
     </div>
 
-    <script src="js/api.js"></script>
-    <script src="js/auth.js"></script>
-</body>
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center fade-in">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-check text-green-600 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4" id="successTitle">Success!</h3>
+            <p class="text-gray-600 mb-8 leading-relaxed" id="successMessage">Welcome to Acadence!</p>
+            <button 
+                class="btn-primary text-white px-8 py-3 rounded-lg font-semibold"
+                onclick="closeSuccessModal()"
+            >
+                Continue
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let currentTab = 'login';
+
+        function switchTab(tab) {
+            if (currentTab === tab) return;
+
+            const loginTab = document.getElementById('loginTab');
+            const signupTab = document.getElementById('signupTab');
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+
+            if (tab === 'login') {
+                loginTab.className = 'flex-1 py-3 px-4 rounded-lg font-semibold transition-all duration-300 tab-active';
+                signupTab.className = 'flex-1 py-3 px-4 rounded-lg font-semibold transition-all duration-300 tab-inactive';
+                
+                signupForm.classList.add('hidden');
+                loginForm.classList.remove('hidden');
+                loginForm.className = 'slide-in-left';
+                
+            } else {
+                signupTab.className = 'flex-1 py-3 px-4 rounded-lg font-semibold transition-all duration-300 tab-active';
+                loginTab.className = 'flex-1 py-3 px-4 rounded-lg font-semibold transition-all duration-300 tab-inactive';
+                
+                loginForm.classList.add('hidden');
+                signupForm.classList.remove('hidden');
+                signupForm.className = 'slide-in-right';
+            }
+
+            currentTab = tab;
+        }
+
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const toggle = document.getElementById(inputId + 'Toggle');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                toggle.className = 'fas fa-eye-slash';
+            } else {
+                input.type = 'password';
+                toggle.className = 'fas fa-eye';
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const email = formData.get('email');
+            const role = formData.get('role');
+            
+            const name = email.split('@')[0].replace(/[^a-zA-Z]/g, '');
+            const displayName = name.charAt(0).toUpperCase() + name.slice(1);
+            
+            const roleNames = {
+                'student': 'Student',
+                'teacher': 'Teacher',
+                'ngo': 'NGO Representative'
+            };
+            
+            showSuccessModal(
+                `Welcome back, ${displayName}!`,
+                `You've successfully signed in as a ${roleNames[role]}. Your dashboard is ready with all your courses and progress.`
+            );
+        }
+
+        function handleSignup(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const role = formData.get('role');
+            
+            const firstName = name.split(' ')[0];
+            
+            const roleNames = {
+                'student': 'Student',
+                'teacher': 'Teacher',
+                'ngo': 'NGO Representative'
+            };
+            
+            showSuccessModal(
+                `Welcome to Acadence, ${firstName}!`,
+                `Your ${roleNames[role]} account has been created successfully. You can now access all features and start your learning journey.`
+            );
+        }
+
+        function showForgotPassword() {
+            alert('Password Reset\n\nA password reset link will be sent to your registered email address. Please check your inbox and follow the instructions.');
+        }
+
+        function showSuccessModal(title, message) {
+            document.getElementById('successTitle').textContent = title;
+            document.getElementById('successMessage').textContent = message;
+            document.getElementById('successModal').classList.remove('hidden');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+            setTimeout(() => {
+                alert('Redirecting to Dashboard\n\nWelcome to your Acadence dashboard! Here you can access your courses, track progress, and explore new learning opportunities.');
+            }, 300);
+        }
+
+        // Social login handlers
+        document.querySelectorAll('.social-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const provider = this.textContent.trim();
+                alert(`${provider} Sign In\n\nYou will be redirected to ${provider} to complete the authentication process.`);
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9774fefa918b22a9',t:'MTc1NjU2NDMzMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
